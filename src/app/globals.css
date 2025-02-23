@@ -1,0 +1,37 @@
+@import '@fontsource/inter';
+
+@font-face {
+  font-family: 'Batangas';
+  src: url('../assets/fonts/Batangas\ Bold\ 700.otf') format('woff2'),
+       url('../assets/fonts/Batangas\ Bold\ 700.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  font-family: 'Batangas', 'Inter', sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Batangas', 'Inter', Arial, Helvetica, sans-serif;
+}
