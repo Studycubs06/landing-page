@@ -13,11 +13,12 @@ const BookDemo = () => {
         >
           <CalendlyEmbed url="https://calendly.com/studycubs06/studycubs-demo-classes?hide_landing_page_details=1&hide_gdpr_banner=1" />
         </div>
-        <div className="md:w-1/2 text-right mt-6">
-          <h2 className="text-5xl md:text-6xl font-bold space-y-4 flex flex-col">
+
+        <div className="md:w-1/2 text-center md:text-right mt-6">
+          <h2 className="text-3xl md:text-6xl font-bold space-y-4 flex flex-col">
             <span>Try a Free Demo</span>
-            <span>experience personalized</span>
-            <span>learning at StudyCubs!</span>
+            <span>Experience Personalized</span>
+            <span>Learning at StudyCubs!</span>
           </h2>
         </div>
       </div>
