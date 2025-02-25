@@ -38,26 +38,28 @@ const ParentChoice = () => {
   return (
     <section className="text-white">
       <div className="w-full bg-[#003366] text-center py-6">
-        <h2 className="text-6xl font-bold text-white">Parents Choice</h2>
+        <h2 className="text-3xl sm:text-6xl font-bold text-white">
+          Parents Choice
+        </h2>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 py-10">
+      <div className="container mx-auto p-6 md:px-12 py-10">
         <div className="overflow-x-auto flex space-x-14 scrollbar-hide w-full">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="w-[300px] px-6 py-6 border border-black rounded-lg bg-transparent relative shadow-md flex-shrink-0"
+              className="w-full sm:w-[300px] p-3 sm:p-6 border border-black rounded-lg bg-transparent relative shadow-md flex-shrink-0"
             >
               <RiDoubleQuotesL size={50} color="#0097B2" />
 
               <p
-                className="text-black font-normal mt-2 text-lg"
+                className="text-black font-bold text-md sm:text-lg"
                 style={{ fontFamily: "Arial, sans-serif", fontWeight: "100" }}
               >
                 {testimonial.text}
               </p>
 
-              <div className="flex items-center mt-6">
+              <div className="flex items-center mt-3 sm:mt-6">
                 <Image
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -67,7 +69,7 @@ const ParentChoice = () => {
                 />
 
                 <div className="ml-4">
-                  <h3 className="text-black font-bold text-lg">
+                  <h3 className="text-black font-bold text-md sm:text-lg">
                     {testimonial.name}
                   </h3>
                   <p className="text-gray-700 text-sm">

@@ -19,15 +19,15 @@ const FAQComponent = () => {
   };
 
   return (
-    <section className="text-white py-8">
-      <div className="w-full text-center py-6">
-        <h2 className="text-5xl font-bold text-black">
+    <section className="text-white my-8">
+      <div className="w-full text-center pb-6">
+        <h2 className="text-2xl sm:text-5xl font-bold text-black">
           Discover Frequently Asked Questions
         </h2>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 py-10">
-        <div className="flex flex-col gap-5 w-full bg-[#003366] px-16 py-16">
+      <div className="container mx-auto p-0 sm:px-6 md:px-12 md:py-10">
+        <div className="flex flex-col gap-5 w-full bg-[#003366] p-4 md:px-16 md:py-16">
           {faqs.map((faq, index) => (
             <div key={index} className="border-b border-white w-full">
               <button

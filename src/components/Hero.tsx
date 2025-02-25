@@ -6,23 +6,23 @@ import heroImage from "../assets/images/image 9.png";
 const Hero = () => {
   return (
     <section className="bg-[#0097B2] text-white py-16">
-      <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 text-left md:text-left">
-          <h2 className="text-5xl md:text-7xl font-bold leading-[1.3]">
-            Learn, Play, and
-            <br /> Grow with
+      <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center">
+        <div className="md:w-1/2 text-center md:text-left">
+          <h2 className="text-3xl md:text-7xl font-bold leading-[1.3]">
+            Learn, Play, and Grow with
+            <span className="text-3xl md:text-6xl font-bold bg-[#FFBC36] px-3 py-1 inline-block mt-3 ml-4 text-[#003366]">
+              StudyCubs
+            </span>
           </h2>
-          <h1 className="text-5xl md:text-6xl font-bold bg-[#FFBC36] px-3 py-1 inline-block mt-3 text-[#003366]">
-            StudyCubs
-          </h1>
-          <p className="mt-4 text-lg md:text-xl">
+
+          <p className="mt-4 text-md md:text-xl font-inter">
             Empowering students with essential skills in public speaking,
             coding, and more. Unlock your potential with personalized learning
             at StudyCubs!
           </p>
         </div>
 
-        <div className="md:w-1/2 flex justify-end relative mt-8 md:mt-0">
+        <div className="md:w-1/2 flex justify-end relative mb-[40]">
           <Image
             src={bgVector}
             alt="Background Vector"
@@ -32,10 +32,10 @@ const Hero = () => {
           <Image
             src={heroImage}
             alt="Overlapping Hero"
-            className="absolute bottom-[10] left-[65%] transform -translate-x-1/2 w-[50%] md:w-[45%] max-w-md"
+            className="absolute bottom-[0] md:bottom-[10] left-[55%] md:left-[65%] transform -translate-x-1/2 w-[60%] md:w-[45%] max-w-md"
           />
 
-          <button className="bg-[#003366] text-[#fff] px-10 py-3 w-[400px] rounded-lg font-bold text-3xl absolute bottom-[-30px] left-[65%] transform -translate-x-1/2 hover:bg-[#E6A500] shadow-md">
+          <button className="bg-[#003366] text-[#fff] px-10 py-3 w-[250px] md:w-[400px] rounded-lg font-bold text-lg md:text-3xl absolute bottom-[-20] md:bottom-[-30px] left-[50%] md:left-[65%] transform -translate-x-1/2 hover:bg-[#E6A500] shadow-md">
             Book Your Free Trial
           </button>
         </div>

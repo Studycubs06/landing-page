@@ -30,7 +30,6 @@ export const metadata = {
     instagram: "https://www.instagram.com/studycubs/",
     twitter: "https://twitter.com/studycubs",
   },
-  // Add favicon
   favicon: "/favicon.ico",
 };
 

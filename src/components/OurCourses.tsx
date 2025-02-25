@@ -5,6 +5,7 @@ import course2 from "../assets/images/image 24.png";
 import course3 from "../assets/images/image 25.png";
 import course4 from "../assets/images/image.png";
 import bgImage from "../assets/images/image 22.png";
+import Link from "next/link";
 
 const courses = [
   {
@@ -12,19 +13,28 @@ const courses = [
     name: "Public Speaking",
     grade: "For Grade 3 - 12",
     imgSrc: course1,
+    link: "/public-speaking",
   },
   {
     id: 2,
-    name: "Web Development",
+    name: "Financial planning",
+    grade: "For Grade 3 - 12",
+    imgSrc: course3,
+    link: "/financial-planning",
+  },
+  {
+    id: 3,
+    name: "Web development",
     grade: "For Grade 3 - 12",
     imgSrc: course2,
+    link: "",
   },
-  { id: 3, name: "Ai & ML", grade: "For Grade 3 - 12", imgSrc: course3 },
   {
     id: 4,
     name: "App Developement",
     grade: "For Grade 3 - 12",
     imgSrc: course4,
+    link: "",
   },
 ];
 
@@ -40,37 +50,40 @@ const OurCourses = () => {
         className="absolute top-0 left-0 w-full h-full -z-10"
       />
       <div className="w-full bg-[#0097B2] text-center py-6">
-        <h2 className="text-6xl font-bold text-white">OUR COURSES</h2>
+        <h2 className="text-3xl sm:text-6xl font-bold text-white">
+          OUR COURSES
+        </h2>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 py-10">
-        <div className="overflow-x-auto flex space-x-14 scrollbar-hide w-full">
+      <div className="container mx-auto p-3 sm:px-6 md:px-12 md:py-10">
+        <div className="grid grid-flow-col grid-col-4 gap-4 overflow-x-auto scrollbar-hide w-full">
           {courses.map((course) => (
             <div
               key={course.id}
-              className="w-[280px] h-[400px] bg-white rounded-lg shadow-lg p-5 flex flex-col items-center"
+              className="bg-white min-w-[250px] rounded-lg shadow-lg p-5 flex flex-col items-center gap-4"
             >
-              <div className="w-40 h-40 flex justify-center">
+              <div className="flex justify-center">
                 <Image
                   src={course.imgSrc}
                   alt={course.name}
                   width={160}
                   height={160}
-                  className="rounded-lg"
+                  className="rounded-lg w-[100px] h-[100px] sm:w-[160px] sm:h-[160px]"
                 />
               </div>
 
-              <h3 className="text-black text-xl font-bold mt-4">
-                {course.name}
-              </h3>
+              <h3 className="text-black text-xl font-bold">{course.name}</h3>
 
-              <span className="mt-2 bg-[#FFF7E6] text-[#FFBC36] px-8 py-1 rounded-lg text-lg font-medium">
+              <span className="bg-[#FFF7E6] text-[#FFBC36] px-8 py-1 rounded-lg text-lg font-medium">
                 {course.grade}
               </span>
 
-              <button className="mt-6 bg-[#FFBC36] text-white px-8 py-2 text-lg font-semibold">
+              <Link
+                href={course.link}
+                className="bg-[#FFBC36] text-white px-8 py-2 text-lg font-semibold"
+              >
                 Book a Free Trial
-              </button>
+              </Link>
             </div>
           ))}
         </div>

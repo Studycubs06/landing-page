@@ -5,20 +5,19 @@ const Footer = () => {
   return (
     <footer className="bg-[#003366] text-white py-10">
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Column 1: Logo & Social Icons */}
         <div>
           <h1 className="text-4xl text-[#FFBC36] font-bold font-batangas">
             Study<span className="text-[#0097B2] font-bold">Cubs</span>
           </h1>
-          <div className="flex space-x-4 mt-4">
-            <FaFacebook className="text-xl cursor-pointer hover:text-gray-300" />
-            <FaInstagram className="text-xl cursor-pointer hover:text-gray-300" />
-            <FaTwitter className="text-xl cursor-pointer hover:text-gray-300" />
-            <FaLinkedin className="text-xl cursor-pointer hover:text-gray-300" />
+          <div className="flex space-x-4 mt-3">
+            <FaInstagram className="text-4xl cursor-pointer hover:text-gray-300" />
+            <FaLinkedin className="text-4xl cursor-pointer hover:text-gray-300" />
+            <FaFacebook className="text-4xl cursor-pointer hover:text-gray-300" />
+
+            <FaTwitter className="text-4xl cursor-pointer hover:text-gray-300" />
           </div>
         </div>
 
-        {/* Column 2: Policies */}
         <div>
           <h3 className="text-2xl font-semibold mb-4">Policies</h3>
           <ul className="space-y-2">
@@ -49,7 +48,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 3: Address */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Address</h3>
           <p style={{ fontFamily: "Arial, sans-serif", fontWeight: "100" }}>
@@ -57,7 +55,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Column 4: Contact Us */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <p style={{ fontFamily: "Arial, sans-serif", fontWeight: "100" }}>

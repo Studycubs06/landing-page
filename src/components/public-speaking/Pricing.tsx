@@ -36,7 +36,7 @@ const Pricing: React.FC<PricingProps> = ({
         <h1 className="text-3xl font-bold">{title}</h1>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 py-10">
+      <div className="container mx-auto p-0 sm:px-6 md:px-12 md:py-10">
         <div className="w-full flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-x-10">
           {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center">
