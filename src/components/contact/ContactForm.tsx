@@ -17,9 +17,9 @@ const ContactForm = () => {
               Get in Touch with Studycubs
             </h2>
             <p className="mb-6 md:w-1/2">
-              Have questions, feedback, or need assistance? We're here to listen
-              and support you. Reach out to StudyCubs, and we’ll ensure your
-              learning journey is seamless and rewarding!
+              Have questions, feedback, or need assistance? We&apos;re here to
+              listen and support you. Reach out to StudyCubs, and we&apos;ll
+              ensure your learning journey is seamless and rewarding!
             </p>
             <p className="text-lg">
               Please mail us :{" "}
