@@ -32,3 +32,10 @@ export interface PricingData {
     bgColorLight: string;
     bgColorDark: string;
   }
+
+  export interface Student {
+    id: number;
+    name: string;
+    grade: string;
+    imgSrc: StaticImageData;
+  }

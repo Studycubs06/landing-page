@@ -2,7 +2,7 @@ import React from "react";
 
 const WhytoChoose = () => {
   return (
-    <section className="text-white my-8">
+    <section className="text-white my-8" id="about">
       <div className="w-full text-center pb-6">
         <h2 className="text-3xl sm:text-5xl font-bold text-black">
           Why to choose{" "}

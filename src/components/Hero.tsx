@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-7xl font-bold leading-[1.3]">
             Learn, Play, and Grow with
-            <span className="text-3xl md:text-6xl font-bold bg-[#FFBC36] px-3 py-1 inline-block mt-3 ml-4 text-[#003366]">
+            <span className="text-3xl md:text-6xl font-bold bg-[#FFBC36] px-3 py-1 inline-block mt-3 text-[#fff]">
               StudyCubs
             </span>
           </h2>
@@ -32,10 +32,10 @@ const Hero = () => {
           <Image
             src={heroImage}
             alt="Overlapping Hero"
-            className="absolute bottom-[0] md:bottom-[10] left-[55%] md:left-[65%] transform -translate-x-1/2 w-[60%] md:w-[45%] max-w-md"
+            className="absolute bottom-0 md:bottom-[10px] left-[55%] xs:left-[60%] xlg:left-[65%] transform -translate-x-1/2 w-[60%] md:w-[45%] max-w-md"
           />
 
-          <button className="bg-[#003366] text-[#fff] px-10 py-3 w-[250px] md:w-[400px] rounded-lg font-bold text-lg md:text-3xl absolute bottom-[-20] md:bottom-[-30px] left-[50%] md:left-[65%] transform -translate-x-1/2 hover:bg-[#E6A500] shadow-md">
+          <button className="bg-[#003366] text-[#fff] px-10 py-3 w-[250px] md:w-[400px] rounded-lg font-bold text-lg md:text-3xl absolute bottom-[-20] md:bottom-[-30px] left-[60%] xlg:left-[65%] transform -translate-x-1/2 hover:bg-[#E6A500] shadow-md">
             Book Your Free Trial
           </button>
         </div>
