@@ -1,5 +1,7 @@
-import React from "react";
-import Image from "next/image";
+"use client";
+
+import React, { useRef, useEffect, useState } from "react";
+import Image, { StaticImageData } from "next/image";
 import userImage from "../assets/images/userImage.png";
 import { RiDoubleQuotesL } from "react-icons/ri";
 
@@ -35,6 +37,65 @@ const testimonials = [
 ];
 
 const ParentChoice = () => {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [isScrolling, setIsScrolling] = useState(true);
+  const [duplicatedTestimonials, setDuplicatedTestimonials] = useState<
+    {
+      id: number;
+      text: string;
+      name: string;
+      designation: string;
+      image: StaticImageData;
+    }[]
+  >([]);
+
+  useEffect(() => {
+    setDuplicatedTestimonials([
+      ...testimonials,
+      ...testimonials,
+      ...testimonials,
+    ]);
+  }, []);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    let animationId: number | null = null;
+    let scrollPosition = 0;
+    const scrollSpeed = 0.8;
+
+    const scroll = () => {
+      if (scrollContainer && isScrolling) {
+        scrollPosition += scrollSpeed;
+
+        if (
+          scrollPosition >=
+          scrollContainer.firstChild.offsetWidth * testimonials.length
+        ) {
+          scrollPosition = 0;
+        }
+
+        scrollContainer.scrollLeft = scrollPosition;
+        animationId = requestAnimationFrame(scroll);
+      }
+    };
+
+    if (isScrolling) {
+      animationId = requestAnimationFrame(scroll);
+    }
+
+    return () => {
+      cancelAnimationFrame(animationId);
+    };
+  }, [isScrolling]);
+
+  const handleMouseDown = () => {
+    setIsScrolling(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsScrolling(true);
+  };
+
   return (
     <section className="text-white">
       <div className="w-full bg-[#003366] text-center py-6">
@@ -44,10 +105,29 @@ const ParentChoice = () => {
       </div>
 
       <div className="container mx-auto p-6 md:px-12 py-10">
-        <div className="overflow-x-auto flex space-x-14 scrollbar-hide w-full">
-          {testimonials.map((testimonial) => (
+        <div
+          ref={scrollRef}
+          className="flex space-x-14 overflow-x-auto w-full"
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            overflow: "-moz-scrollbars-none",
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onTouchStart={handleMouseDown}
+          onTouchEnd={handleMouseUp}
+        >
+          <style jsx>{`
+            div::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
+
+          {duplicatedTestimonials.map((testimonial, index) => (
             <div
-              key={testimonial.id}
+              key={`${testimonial.id}-${index}`}
               className="w-full sm:w-[300px] p-3 sm:p-6 border border-black rounded-lg bg-transparent relative shadow-md flex-shrink-0"
             >
               <RiDoubleQuotesL size={50} color="#0097B2" />

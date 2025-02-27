@@ -1,5 +1,11 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -15,6 +21,7 @@ const Footer = () => {
             <FaFacebook className="text-4xl cursor-pointer hover:text-gray-300" />
 
             <FaTwitter className="text-4xl cursor-pointer hover:text-gray-300" />
+            <FaYoutube className="text-4xl cursor-pointer hover:text-gray-300" />
           </div>
         </div>
 
@@ -74,6 +81,12 @@ const Footer = () => {
             </a>
           </p>
         </div>
+      </div>
+      <div className="mx-auto px-6 md:px-32 mt-8">
+        <hr className="bg-white mb-5" />
+        <p className="font-inter text-[12px]">
+          2025 Copyright <a href="#">Studycubs.</a> All Rights Reserved
+        </p>
       </div>
     </footer>
   );

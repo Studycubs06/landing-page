@@ -40,7 +40,7 @@ const courses = [
 
 const OurCourses = () => {
   return (
-    <section className="text-white relative ">
+    <section className="text-white relative" id="our-courses">
       <Image
         src={bgImage}
         alt="Background"

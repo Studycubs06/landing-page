@@ -10,7 +10,7 @@ const ThirdSection = () => {
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-6xl font-bold leading-[1.3]">
             From Beginner to Pro Learn, Code, and Create with
-            <span className="text-3xl ml-3 md:text-6xl font-bold bg-[#FFBC36] px-3 py-1 inline-block mt-3 text-[#fff]">
+            <span className="text-3xl  md:text-6xl font-bold bg-[#FFBC36] px-3 py-1 inline-block mt-3 text-[#fff]">
               StudyCubs!
             </span>
           </h2>
@@ -30,7 +30,7 @@ const ThirdSection = () => {
           <Image
             src={heroImage}
             alt="Overlapping Hero"
-            className="absolute bottom-[30px] left-[50%] transform -translate-x-1/2 w-[90%] md:w-[70%] max-w-md"
+            className="absolute bottom-[30px] left-[50%] xs:left-[60%] xlg:left-[65%] transform -translate-x-1/2 w-[90%] md:w-[70%] max-w-md"
           />
           <div className="flex justify-center mt-8 md:hidden">
             <button className="bg-[#FFBC36] absolute left-[10px] bottom-[-10px] text-[#fff] px-8 py-2 rounded-lg font-bold text-2xl hover:bg-[#E6A500] shadow-md w-full max-w-[300px]">

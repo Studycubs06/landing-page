@@ -19,7 +19,7 @@ const JourneyBoxes = ({
         <p className="mt-4 text-md text-[#5A7184] font-inter">{description}</p>
       </div>
 
-      <div className="container mx-auto  sm:px-6 md:px-12 md:py-10 p-0 relative">
+      <div className="container mx-auto  sm:px-6 px-12 md:px-12 md:py-10 p-0 relative">
         <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 relative">
           {/* Yellow Line - Adjust for Mobile */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-full md:w-[calc(100%-134px)] h-[15px] bg-yellow-400 z-0"></div>

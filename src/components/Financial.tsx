@@ -20,11 +20,12 @@ const Financial = () => {
           <Image
             src={boyImage}
             alt="Overlapping Hero"
-            className="absolute bottom-[10px] md:bottom-[0] left-[100px] md:left-1/3 transform -translate-x-1/2 w-[80%] md:w-[6 0%] max-w-md"
+            className="absolute bottom-[10px] md:bottom-[0] left-[45%] xs:left-[35%] lg:left-[40%] transform -translate-x-1/2 w-[80%] md:w-[60%] max-w-md"
           />
+
           <Link
             href="/financial-planning"
-            className="bg-[#0097B2] absolute bottom-0 left-[-10px] text-[#fff] px-8 py-2 mt-4 rounded-lg font-bold text-2xl hover:bg-[#E6A500] shadow-md block md:hidden w-full max-w-[300px] mx-auto"
+            className="bg-[#0097B2] text-center absolute bottom-0 left-[-10px] text-[#fff] px-8 py-2 mt-4 rounded-lg font-bold text-2xl hover:bg-[#E6A500] shadow-md block md:hidden w-full max-w-[300px] mx-auto"
           >
             Enroll Now
           </Link>
@@ -32,7 +33,7 @@ const Financial = () => {
         <div className="md:w-1/2 text-center md:text-left mt-5">
           <h2 className="text-3xl md:text-7xl font-bold leading-[1.3]">
             Master financial and making informed investment
-            <span className="text-3xl ml-3 sm:text-xl md:text-6xl font-bold bg-[#0097B2] px-3 py-1 inline-block mt-3 text-[#fff]">
+            <span className="text-3xl sm:text-xl md:text-6xl font-bold bg-[#0097B2] px-3 py-1 inline-block mt-3 text-[#fff]">
               choices.
             </span>
           </h2>

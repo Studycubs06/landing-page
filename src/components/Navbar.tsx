@@ -19,13 +19,13 @@ export default function Navbar() {
           <Link href="/" className="hover:text-gray-300">
             Home
           </Link>
-          <Link href="/courses" className="hover:text-gray-300">
+          <Link href="/#our-courses" className="hover:text-gray-300">
             Courses
           </Link>
           <Link href="/contact" className="hover:text-gray-300">
             Contact
           </Link>
-          <Link href="/about" className="hover:text-gray-300">
+          <Link href="/#about" className="hover:text-gray-300">
             About
           </Link>
         </div>
