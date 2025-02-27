@@ -16,9 +16,9 @@ const students: Student[] = [
 
 const SuperCub = () => {
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-  const [isPaused, setIsPaused] = useState<boolean>(false);
   const animationRef = useRef<number | null>(null);
-  const scrollPositionRef = useRef<number | null>(null);
+  const scrollPositionRef = useRef<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
 
   const duplicatedStudents = [...students, ...students, ...students];
 
@@ -28,14 +28,14 @@ const SuperCub = () => {
 
     if (scrollContainer) {
       scrollPositionRef.current =
-        scrollPositionRef.current ?? scrollContainer.scrollWidth / 3;
+        scrollPositionRef.current || scrollContainer.scrollWidth / 3;
       scrollContainer.scrollLeft = scrollPositionRef.current;
     }
 
     const scrollAnimation = () => {
+      if (isPaused) return;
       if (scrollContainer) {
-        scrollPositionRef.current =
-          (scrollPositionRef.current ?? 0) + scrollSpeed;
+        scrollPositionRef.current += scrollSpeed;
 
         if (scrollPositionRef.current <= 0) {
           scrollPositionRef.current = scrollContainer.scrollWidth / 3;
@@ -47,12 +47,12 @@ const SuperCub = () => {
       animationRef.current = requestAnimationFrame(scrollAnimation);
     };
 
-    animationRef.current = requestAnimationFrame(scrollAnimation);
+    if (!isPaused) {
+      animationRef.current = requestAnimationFrame(scrollAnimation);
+    }
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, [isPaused]);
 

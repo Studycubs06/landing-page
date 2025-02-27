@@ -17,9 +17,9 @@ const ContactForm = () => {
               Get in Touch with Studycubs
             </h2>
             <p className="mb-6 md:w-1/2">
-              Have questions, feedback, or need assistance? We&apos;re here to
-              listen and support you. Reach out to StudyCubs, and we&apos;ll
-              ensure your learning journey is seamless and rewarding!
+              Have questions, feedback, or need assistance? We're here to listen
+              and support you. Reach out to StudyCubs, and we’ll ensure your
+              learning journey is seamless and rewarding!
             </p>
             <p className="text-lg">
               Please mail us :{" "}
@@ -27,32 +27,61 @@ const ContactForm = () => {
             </p>
             <p className="text-[#019DD7] mt-5">Follow us on</p>
             <div className="flex space-x-4 mt-3">
-              <FaFacebook
-                className="text-4xl cursor-pointer hover:text-gray-300"
-                size={15}
-                color="#575756"
-              />
-
-              <FaTwitter
-                className="text-4xl cursor-pointer hover:text-gray-300"
-                size={15}
-                color="#575756"
-              />
-              <FaInstagram
-                className="text-4xl cursor-pointer hover:text-gray-300"
-                size={15}
-                color="#575756"
-              />
-              <FaLinkedin
-                className="text-4xl cursor-pointer hover:text-gray-300"
-                size={15}
-                color="#575756"
-              />
-              <FaYoutube
-                className="text-4xl cursor-pointer hover:text-gray-300"
-                size={15}
-                color="#575756"
-              />
+              <a
+                href="https://www.facebook.com/studycubs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebook
+                  className="text-4xl cursor-pointer hover:text-gray-300"
+                  size={15}
+                  color="#575756"
+                />
+              </a>
+              <a
+                href="https://twitter.com/studycubs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter
+                  className="text-4xl cursor-pointer hover:text-gray-300"
+                  size={15}
+                  color="#575756"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/studycubs/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram
+                  className="text-4xl cursor-pointer hover:text-gray-300"
+                  size={15}
+                  color="#575756"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/study-cubs/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin
+                  className="text-4xl cursor-pointer hover:text-gray-300"
+                  size={15}
+                  color="#575756"
+                />
+              </a>
+              <a
+                href="https://youtube.com/@studycubs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube
+                  className="text-4xl cursor-pointer hover:text-gray-300"
+                  size={15}
+                  color="#575756"
+                />
+              </a>
             </div>
           </div>
 

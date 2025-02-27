@@ -67,12 +67,9 @@ const ParentChoice = () => {
       if (scrollContainer && isScrolling) {
         scrollPosition += scrollSpeed;
 
-        // Cast firstChild to HTMLElement before accessing offsetWidth
-        const firstChild = scrollContainer.firstChild as HTMLElement | null;
-
         if (
-          firstChild &&
-          scrollPosition >= firstChild.offsetWidth * testimonials.length
+          scrollPosition >=
+          scrollContainer.firstChild.offsetWidth * testimonials.length
         ) {
           scrollPosition = 0;
         }
@@ -87,9 +84,7 @@ const ParentChoice = () => {
     }
 
     return () => {
-      if (animationId !== null) {
-        cancelAnimationFrame(animationId);
-      }
+      cancelAnimationFrame(animationId);
     };
   }, [isScrolling]);
 
