@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   FaFacebook,
@@ -12,16 +13,47 @@ const Footer = () => {
     <footer className="bg-[#003366] text-white py-10">
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <h1 className="text-4xl text-[#FFBC36] font-bold font-batangas">
-            Study<span className="text-[#0097B2] font-bold">Cubs</span>
-          </h1>
+          <Link href="/" passHref>
+            <h1 className="text-4xl text-[#FFBC36] font-bold font-batangas">
+              Study<span className="text-[#0097B2] font-bold">Cubs</span>
+            </h1>
+          </Link>
           <div className="flex space-x-4 mt-3">
-            <FaInstagram className="text-4xl cursor-pointer hover:text-gray-300" />
-            <FaLinkedin className="text-4xl cursor-pointer hover:text-gray-300" />
-            <FaFacebook className="text-4xl cursor-pointer hover:text-gray-300" />
-
-            <FaTwitter className="text-4xl cursor-pointer hover:text-gray-300" />
-            <FaYoutube className="text-4xl cursor-pointer hover:text-gray-300" />
+            <a
+              href="https://www.instagram.com/studycubs/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="text-4xl cursor-pointer hover:text-gray-300" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/study-cubs/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="text-4xl cursor-pointer hover:text-gray-300" />
+            </a>
+            <a
+              href="https://www.facebook.com/studycubs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook className="text-4xl cursor-pointer hover:text-gray-300" />
+            </a>
+            <a
+              href="https://twitter.com/studycubs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter className="text-4xl cursor-pointer hover:text-gray-300" />
+            </a>
+            <a
+              href="https://youtube.com/@studycubs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube className="text-4xl cursor-pointer hover:text-gray-300" />
+            </a>
           </div>
         </div>
 

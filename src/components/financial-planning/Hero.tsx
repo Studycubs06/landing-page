@@ -16,8 +16,8 @@ export default function Hero() {
       />
 
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-stretch">
-        <div className="md:w-1/2 text-white flex flex-col justify-start relative md:bottom-[200px] bottom-[100px]">
-          <h2 className="text-3xl md:text-4xl font-bold leading-[1.3]">
+        <div className="md:w-1/2 text-white flex flex-col justify-start relative md:bottom-[100px] bottom-[100px]">
+          <h2 className="text-3xl md:text-5xl font-bold leading-[1.3]">
             Master Financial Planning
             <br />
             Learn Live 1:5

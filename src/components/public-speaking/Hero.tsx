@@ -17,8 +17,8 @@ export default function Hero() {
       />
 
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-stretch">
-        <div className="md:w-1/2 flex flex-col justify-start relative md:bottom-[200px] pt-10 md:pt-0">
-          <h2 className="text-3xl md:text-4xl font-bold leading-[1.3]">
+        <div className="md:w-1/2 flex flex-col justify-start relative md:bottom-[100px] pt-10 md:pt-0">
+          <h2 className="text-3xl md:text-5xl font-bold leading-[1.3]">
             Public speaking to build{" "}
             <span className="text-2xl md:text-4xl font-bold bg-[#2AB7CA] px-3 py-1 inline-block text-[#fff]">
               CONFIDENCE

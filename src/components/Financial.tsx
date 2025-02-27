@@ -32,7 +32,7 @@ const Financial = () => {
         </div>
         <div className="md:w-1/2 text-center md:text-left mt-5">
           <h2 className="text-3xl md:text-7xl font-bold leading-[1.3]">
-            Master financial and making informed investment
+            Master finance and make smart investment{" "}
             <span className="text-3xl sm:text-xl md:text-6xl font-bold bg-[#0097B2] px-3 py-1 inline-block mt-3 text-[#fff]">
               choices.
             </span>

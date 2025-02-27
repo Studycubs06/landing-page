@@ -9,7 +9,7 @@ const ThirdSection = () => {
       <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center">
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-6xl font-bold leading-[1.3]">
-            From Beginner to Pro Learn, Code, and Create with
+            From Beginner to Pro Learn, Code, and Create with{" "}
             <span className="text-3xl  md:text-6xl font-bold bg-[#FFBC36] px-3 py-1 inline-block mt-3 text-[#fff]">
               StudyCubs!
             </span>

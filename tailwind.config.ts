@@ -17,6 +17,10 @@ export default {
         batanga: ['Batanga', ...fontFamily.sans],
         inter: ['Inter', ...fontFamily.sans],
       },
+      screens: {
+        xlg: "1535px",
+        xs: "768px",
+      },
     },
   },
   plugins: [],
