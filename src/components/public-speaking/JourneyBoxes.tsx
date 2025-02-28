@@ -15,19 +15,18 @@ const JourneyBoxes = ({
   return (
     <section className="bg-[#fff] text-black py-16">
       <div className="max-w-[1200px] mx-auto text-center px-4">
-        <h1 className="text-3xl font-bold">{title}</h1>
+        <h1 className="text-3xl font-inter">{title}</h1>
         <p className="mt-4 text-md text-[#5A7184] font-inter">{description}</p>
       </div>
 
       <div className="container mx-auto  sm:px-6 px-12 md:px-12 md:py-10 p-0 relative">
         <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 relative">
-          {/* Yellow Line - Adjust for Mobile */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-full md:w-[calc(100%-134px)] h-[15px] bg-yellow-400 z-0"></div>
 
           {boxes.map((box) => (
             <div
               key={box.id}
-              className={`w-full md:w-[268px] h-[300px] bg-white flex flex-col items-center text-center z-10
+              className={`w-full md:w-[268px] font-inter font-bold h-[300px] bg-white flex flex-col items-center text-center z-10
         shadow-[0px_10px_40px_0px_rgba(0,0,0,0.05)] p-5
         ${box.hasBorder ? "border-[15px] border-[#FFBC36]" : ""}`}
             >
@@ -41,6 +40,7 @@ const JourneyBoxes = ({
                     <Image
                       src={box.image}
                       className="w-[100px] h-[100px]"
+                      objectFit="contain"
                       alt={box.title}
                     />
                   </div>
@@ -64,6 +64,7 @@ const JourneyBoxes = ({
                       src={box.image}
                       width={50}
                       height={50}
+                      objectFit="contain"
                       alt={box.title}
                     />
                   </div>

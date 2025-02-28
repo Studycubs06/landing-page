@@ -33,12 +33,11 @@ const Pricing: React.FC<PricingProps> = ({
       />
 
       <div className="relative z-10 max-w-[1200px] mx-auto text-center px-4">
-        <h1 className="text-3xl font-bold">{title}</h1>
+        <h1 className="text-5xl font-inter font-bold">{title}</h1>
       </div>
 
       <div className="container mx-auto p-0 sm:px-6 px-12 md:px-12 md:py-10">
         <div className="w-full flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-x-10">
-          {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
               src={boyImage}
@@ -49,9 +48,7 @@ const Pricing: React.FC<PricingProps> = ({
             />
           </div>
 
-          {/* Content Section */}
           <div className="flex flex-col w-full md:w-1/2">
-            {/* List Items */}
             <div className="flex flex-col md:flex-row">
               {listItems.map((column, index) => (
                 <div
@@ -72,7 +69,6 @@ const Pricing: React.FC<PricingProps> = ({
               ))}
             </div>
 
-            {/* Buttons */}
             <div className="flex flex-col md:flex-row w-full justify-center md:justify-between mt-10 md:mt-20 gap-4 md:gap-6">
               {buttons.map((btn, idx) => (
                 <button
