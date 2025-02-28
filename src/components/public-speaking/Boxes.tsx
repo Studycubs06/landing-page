@@ -18,7 +18,7 @@ const Boxes = ({
   return (
     <section className="bg-[#fff] text-black py-16">
       <div className="max-w-[1200px] mx-auto text-center px-4">
-        <h1 className="text-3xl font-bold">{title}</h1>
+        <h1 className="text-3xl font-inter">{title}</h1>
         <p className="mt-4 text-md text-[#5A7184] font-inter">{description}</p>
         <h2 className="text-[#5A7184] mt-8">{resultsText}</h2>
       </div>

@@ -8,30 +8,23 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 const testimonials = [
   {
     id: 1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut diam tellus. Suspendisse potenti.",
+    text: "Studycubs seems to be a promising platform for the young kids to learn and grow . The teachers are great  in keeping the children engrossed into learning with various activities every class.",
     name: "John Doe",
     designation: "MBA Graduate",
     image: userImage,
   },
   {
     id: 2,
-    text: "Aliquam erat volutpat. Nulla facilisi. Suspendisse potenti. Cras ut diam tellus.",
+    text: "The public speaking course has really helped my daughter in improving her English-speaking skills, and she seems to be more confident about it. Thanks Studycubs for bringing the difference they promised.",
     name: "Jane Smith",
     designation: "Engineer",
     image: userImage,
   },
   {
     id: 3,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut diam tellus. Suspendisse potenti.",
+    text: "The Financial planning is a must course that I would suggest every parent to enroll their child into. This is the best course that Studycubs have come up with.",
     name: "Robert Brown",
     designation: "Doctor",
-    image: userImage,
-  },
-  {
-    id: 4,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut diam tellus. Suspendisse potenti.",
-    name: "Emily Johnson",
-    designation: "Teacher",
     image: userImage,
   },
 ];

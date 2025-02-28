@@ -1,29 +1,32 @@
 import Boxes from "@/components/public-speaking/Boxes";
-import Hero from "@/components/public-speaking/Hero";
 import JourneyBoxes from "@/components/public-speaking/JourneyBoxes";
 import Pricing from "@/components/public-speaking/Pricing";
-import bgRectangle from "../../assets/images/Rectangle 487.png";
-import boy from "../../assets/images/image 41.png";
-import chat from "../../assets/images/Chat.png";
-import chalkBoard from "../../assets/images/Chalkboard.png";
-import theater from "../../assets/images/Theater.png";
+import bgCoding from "../../assets/images/codingBg.png";
+import coder from "../../assets/images/coderBoy.png";
+import java from "../../assets/images/Java.png";
+import plugIn from "../../assets/images/Plug in.png";
+import UI from "../../assets/images/Ui.png";
 import medal from "../../assets/images/international-math-olympiad.svg fill.png";
-import speaker from "../../assets/icons/speaker.png";
-import logicBlock from "../../assets/icons/logicBlock.png";
-import brain from "../../assets/icons/brain.png";
-import reader from "../../assets/icons/reader.png";
-import handwriting from "../../assets/icons/handwriting.png";
-import { BoxItem, JourneyBoxItem, PricingData } from "../../../types/data";
+import setting from "../../assets/icons/setting.png";
+import laptop from "../../assets/icons/laptop.png";
+import plug from "../../assets/icons/plug.png";
+import database from "../../assets/icons/database.png";
+import user from "../../assets/icons/user.png";
 
-export default function PublicSpeaking() {
+import { BoxItem, JourneyBoxItem, PricingData } from "@/../types/data";
+import Hero from "@/components/coding/Hero";
+import CourseCards from "@/components/coding/CourseCards";
+import Certificate from "@/components/coding/Certificate";
+
+export default function Coding() {
   const pricingData: PricingData = {
-    bgImage: bgRectangle,
+    bgImage: bgCoding,
     textColor: "text-white",
-    title: "Affordable Pricing For You",
-    boyImage: boy,
+    title: "Affordable coding lessons",
+    boyImage: coder,
     listItems: [
       [
-        "Class Size: 5 Students",
+        "Class Size 5 Students",
         "3 Classes a week",
         "Include 1 Activity class",
         "Duration: 1 Hr per day",
@@ -35,39 +38,39 @@ export default function PublicSpeaking() {
         "Flexible Classes",
       ],
     ],
-    buttons: ["₹1499/-", "₹4499/-", "₹8999/-"],
     bulletColor: "bg-white",
+    buttons: ["₹1999/-", "₹5999/-", "₹11999/-"],
   };
 
   const boxes: BoxItem[] = [
     {
       id: 1,
-      image: chat,
+      image: java,
       title: "Fundamental",
-      description: "Conversation",
+      description: "Web Development",
       hasExtraContent: true,
       hasBorder: true,
       classes: 16,
-      activity: 4,
+      activity: 2,
       imageBorder: true,
       textAboveImage: false,
     },
     {
       id: 2,
-      image: chalkBoard,
-      title: "Create Sentence:",
-      description: " Build Vocabulary",
+      image: UI,
+      title: "Build with:",
+      description: "React Js",
       textAboveImage: true,
       textDesc: "Unlocks at",
       classesText: "32 classes",
     },
     {
       id: 3,
-      image: theater,
-      title: "Build creativity:",
-      description: "Creative Performance",
-      classes: 48,
-      activity: 24,
+      image: plugIn,
+      title: "Create with:",
+      description: "Backend Node js",
+      classes: 52,
+      activity: 6,
       hasExtraContent: true,
       textAboveImage: false,
       imageBorder: true,
@@ -75,8 +78,8 @@ export default function PublicSpeaking() {
     {
       id: 4,
       image: medal,
-      title: "Build Confidence",
-      description: "Become Public Speaker",
+      title: "Achived:",
+      description: "Become Full Stack Developer",
       textAboveImage: true,
       textDesc: "Unlocks if you",
       classesText: "sign up for 90 classes",
@@ -89,37 +92,37 @@ export default function PublicSpeaking() {
 
   const boxItems: JourneyBoxItem[] = [
     {
-      image: speaker,
-      alt: "Speaker",
-      text: "Confident Speaker",
+      image: setting,
+      alt: "Fundamentals",
+      text: "Fundamentals",
       bgColorLight: "rgba(255,153,0,0.21)",
       bgColorDark: "#FF9900",
     },
     {
-      image: logicBlock,
-      alt: "Logic Block",
-      text: "Logical & Critical Thinking",
+      image: laptop,
+      alt: "Front-End",
+      text: "Front-End",
       bgColorLight: "rgba(220,155,80,0.21)",
       bgColorDark: "#DC9B50",
     },
     {
-      image: handwriting,
-      alt: "Handwriting",
-      text: "Creative Writing",
+      image: plug,
+      alt: "Backend",
+      text: "Backend",
       bgColorLight: "rgba(252,90,90,0.21)",
       bgColorDark: "#FC5A5A",
     },
     {
-      image: brain,
-      alt: "Brain",
-      text: "Creativity",
+      image: database,
+      alt: "Database",
+      text: "Database",
       bgColorLight: "rgba(61,213,152,0.21)",
       bgColorDark: "#3DD598",
     },
     {
-      image: reader,
-      alt: "Reader",
-      text: "Pro Reader",
+      image: user,
+      alt: "Live project & interview preparation ",
+      text: "Live project & interview preparation ",
       bgColorLight: "rgba(20,222,235,0.21)",
       bgColorDark: "#14DEEB",
     },
@@ -127,11 +130,12 @@ export default function PublicSpeaking() {
   return (
     <>
       <Hero />
+      <CourseCards />
       <Boxes
-        title="Why Public Speaking?"
-        description="Our activity-based curriculum helps kids understand the 'Why' behind public speaking..."
+        title="MERNFULL STACK (WEB) DEVELOPMENT"
+        description="StudyCubs offers a comprehensive MERN Full Stack Development course covering React, Node.js, and MongoDB. Gain hands-on experience with real-world projects, expert mentorship, and flexible learning to become a job-ready developer. Affordable, flexible, and designed to help you succeed!"
         resultsText="What results can your child expect to achieve?"
-        enrollText="Enroll now and watch them shine in every conversation!"
+        enrollText="Enroll now and watch them excel in every web development project!"
         items={boxItems}
       />
       <JourneyBoxes
@@ -140,6 +144,7 @@ export default function PublicSpeaking() {
         boxes={boxes}
       />
       <Pricing {...pricingData} />
+      <Certificate />
     </>
   );
 }

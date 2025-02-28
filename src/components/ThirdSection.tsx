@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import bgVector from "../assets/images/Vector.png";
 import heroImage from "../assets/images/character (1).png";
+import Link from "next/link";
 
 const ThirdSection = () => {
   return (
@@ -15,9 +16,12 @@ const ThirdSection = () => {
             </span>
           </h2>
 
-          <button className="bg-[#FFBC36] text-[#fff] px-10 py-2 rounded-lg font-bold text-3xl mt-6 hover:bg-[#E6A500] shadow-md hidden md:inline-block">
+          <Link
+            href={"/coding"}
+            className="bg-[#FFBC36] text-[#fff] px-10 py-2 rounded-lg font-bold text-3xl mt-6 hover:bg-[#E6A500] shadow-md hidden md:inline-block"
+          >
             Enroll Now
-          </button>
+          </Link>
         </div>
 
         <div className="md:w-1/2 flex justify-end relative mb-10">
@@ -33,9 +37,12 @@ const ThirdSection = () => {
             className="absolute bottom-[30px] left-[50%] xs:left-[60%] xlg:left-[65%] transform -translate-x-1/2 w-[90%] md:w-[70%] max-w-md"
           />
           <div className="flex justify-center mt-8 md:hidden">
-            <button className="bg-[#FFBC36] absolute left-[10px] bottom-[-10px] text-[#fff] px-8 py-2 rounded-lg font-bold text-2xl hover:bg-[#E6A500] shadow-md w-full max-w-[300px]">
+            <Link
+              href={"/coding"}
+              className="bg-[#FFBC36] absolute left-[10px] bottom-[-10px] text-[#fff] px-8 py-2 rounded-lg font-bold text-2xl hover:bg-[#E6A500] shadow-md w-full max-w-[300px]"
+            >
               Enroll Now
-            </button>
+            </Link>
           </div>
         </div>
       </div>
