@@ -3,11 +3,11 @@ import CoursePublicSpeaking from "@/components/CoursePublicSpeaking";
 import FAQComponent from "@/components/FAQComponent";
 import CourseFinancialPlanning from "@/components/CourseFinancialPlanning";
 import Hero from "@/components/Hero";
-import OurCourses from "@/components/OurCourses";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import SuperCub from "@/components/SuperCub";
 import CourseCoding from "@/components/CourseCoding";
 import WhytoChoose from "@/components/WhytoChose";
+import CourseCards from "@/components/coding/CourseCards";
 
 export const metadata = {
   title: "StudyCubs | Learn Smarter",
@@ -43,7 +43,7 @@ export default function Home() {
       <CalendarBooking />
       <SuperCub />
       <TestimonialsSection />
-      <OurCourses />
+      <CourseCards />
       <WhytoChoose />
       <FAQComponent />
     </div>

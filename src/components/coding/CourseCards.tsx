@@ -44,7 +44,10 @@ const courses = [
 
 const CourseCards = () => {
   return (
-    <section className="text-white relative h-auto flex items-center justify-center py-10">
+    <section
+      className="text-white relative h-auto flex items-center justify-center"
+      id="our-courses"
+    >
       <Image
         src={bgImage}
         alt="Background"
@@ -55,6 +58,8 @@ const CourseCards = () => {
       />
 
       <div className="container mx-auto p-3 sm:px-6 md:px-28 md:py-10">
+        <h2 className="sm:text-3xl font-bold text-black pb-6">OUR COURSES</h2>
+
         <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-10 w-full">
           {courses.map((course) => (
             <div

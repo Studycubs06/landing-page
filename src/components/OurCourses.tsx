@@ -24,10 +24,10 @@ const courses = [
   },
   {
     id: 3,
-    name: "Web development",
+    name: "Website development",
     grade: "For Grade 3 - 12",
     imgSrc: course2,
-    link: "",
+    link: "/coding",
   },
   {
     id: 4,
