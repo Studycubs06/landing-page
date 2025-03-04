@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import course1 from "../assets/images/image 23.png";
-import WebDevelopment from "../assets/images/image 50.png";
+import course2 from "../assets/images/image 24.png";
+import course3 from "../assets/images/image 25.png";
 import course4 from "../assets/images/image.png";
 import bgImage from "../assets/images/image 22.png";
 import Link from "next/link";
-import FinancialPlanning from "../assets/images/image 44.png";
 
 const courses = [
   {
@@ -19,15 +19,15 @@ const courses = [
     id: 2,
     name: "Financial planning",
     grade: "For Grade 3 - 12",
-    imgSrc: FinancialPlanning,
+    imgSrc: course3,
     link: "/financial-planning",
   },
   {
     id: 3,
     name: "Web development",
     grade: "For Grade 3 - 12",
-    imgSrc: WebDevelopment,
-    link: "/coding",
+    imgSrc: course2,
+    link: "",
   },
   {
     id: 4,

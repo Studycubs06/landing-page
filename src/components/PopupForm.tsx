@@ -1,4 +1,5 @@
-import { useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { ClipLoader } from "react-spinners";
 
@@ -25,6 +26,18 @@ export default function PopupForm({
     const { name, value, type, checked } = e.target;
     setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Ensure scrolling is reset when component unmounts
+    };
+  }, [isOpen]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

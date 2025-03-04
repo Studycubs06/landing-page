@@ -1,8 +1,8 @@
 import Boxes from "@/components/public-speaking/Boxes";
 import JourneyBoxes from "@/components/public-speaking/JourneyBoxes";
 import Pricing from "@/components/public-speaking/Pricing";
-import bgCoding from "../../assets/images/codingBg.png";
-import coder from "../../assets/images/coderBoy.png";
+import bgCoding from "../../assets/images/codingBg.jpg";
+import coder from "../../assets/images/coderBoy.jpg";
 import java from "../../assets/images/Java.png";
 import plugIn from "../../assets/images/Plug in.png";
 import UI from "../../assets/images/Ui.png";
@@ -40,6 +40,8 @@ export default function Coding() {
     ],
     bulletColor: "bg-white",
     buttons: ["₹1999/-", "₹5999/-", "₹11999/-"],
+    buttonLabels: ["Per Month", "Quarterly", "Semi Annually"],
+    buttonLabelColor: "text-white",
   };
 
   const boxes: BoxItem[] = [

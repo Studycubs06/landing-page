@@ -36,6 +36,8 @@ export default function PublicSpeaking() {
       ],
     ],
     buttons: ["₹1499/-", "₹4499/-", "₹8999/-"],
+    buttonLabels: ["Per Month", "Quarterly", "Semi Annually"],
+    buttonLabelColor: "text-black",
     bulletColor: "bg-white",
   };
 

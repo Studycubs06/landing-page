@@ -39,8 +39,7 @@ const JourneyBoxes = ({
                   <div className="mt-4 mb-4">
                     <Image
                       src={box.image}
-                      className="w-[100px] h-[100px]"
-                      objectFit="contain"
+                      className="w-[120px] h-[120px] object-contain"
                       alt={box.title}
                     />
                   </div>

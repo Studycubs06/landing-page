@@ -1,12 +1,12 @@
-import BookDemo from "@/components/BookDemo";
-import EnrollNow from "@/components/EnrollNow";
+import CalendarBooking from "@/components/CalendarBooking";
+import CoursePublicSpeaking from "@/components/CoursePublicSpeaking";
 import FAQComponent from "@/components/FAQComponent";
-import Financial from "@/components/Financial";
+import CourseFinancialPlanning from "@/components/CourseFinancialPlanning";
 import Hero from "@/components/Hero";
 import OurCourses from "@/components/OurCourses";
-import ParentChoice from "@/components/ParentChoice";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import SuperCub from "@/components/SuperCub";
-import ThirdSection from "@/components/ThirdSection";
+import CourseCoding from "@/components/CourseCoding";
 import WhytoChoose from "@/components/WhytoChose";
 
 export const metadata = {
@@ -37,12 +37,12 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <EnrollNow />
-      <ThirdSection />
-      <Financial />
-      <BookDemo />
+      <CoursePublicSpeaking />
+      <CourseCoding />
+      <CourseFinancialPlanning />
+      <CalendarBooking />
       <SuperCub />
-      <ParentChoice />
+      <TestimonialsSection />
       <OurCourses />
       <WhytoChoose />
       <FAQComponent />

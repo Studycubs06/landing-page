@@ -13,7 +13,8 @@ const courses = [
   {
     id: 1,
     name: "Public Speaking",
-    grade: "For Grade 3 - 12",
+    grade: "For Grade 7 - UG",
+    gradeColor: "text-[#FF8D18]",
     imgSrc: course1,
     shape: shape1,
     shapeClass: "w-[280px] h-[90px] sm:h-[250px]",
@@ -24,18 +25,20 @@ const courses = [
     name: "Financial Planning",
     grade: "For Grade 3 - 12",
     imgSrc: course2,
+    gradeColor: "text-[#A461D8]",
     shape: shape2,
     shapeClass: "w-full h-[90px] sm:h-[120px]",
     link: "/financial-planning",
   },
   {
     id: 3,
-    name: "Web Development",
-    grade: "For Grade 3 - 12",
+    name: "Website Development",
+    grade: "For Grade 7 - UG",
     imgSrc: course3,
+    gradeColor: "text-[#41A1FF]",
     shape: shape3,
     shapeClass: "w-full h-[90px] sm:h-[120px]",
-    link: "",
+    link: "/coding",
   },
 ];
 
@@ -70,7 +73,6 @@ const CourseCards = () => {
                 />
               </div>
 
-              {/* Course Image */}
               <div className="relative mt-[50px]">
                 <Image
                   src={course.imgSrc}
@@ -81,11 +83,13 @@ const CourseCards = () => {
                 />
               </div>
 
-              <h3 className="text-black text-lg font-bold text-center">
+              <h3 className="text-black text-2xl font-inter text-center">
                 {course.name}
               </h3>
 
-              <span className="bg-[#FFF7E6] text-[#FFBC36] px-6 py-1 rounded-lg text-sm font-medium">
+              <span
+                className={`bg-[#EBF7FF] ${course.gradeColor} px-12 py-2 rounded-full text-sm font-inter`}
+              >
                 {course.grade}
               </span>
 
