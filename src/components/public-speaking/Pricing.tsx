@@ -4,9 +4,11 @@ interface PricingProps {
   bgImage: StaticImageData;
   textColor: string;
   title: string;
+  buttonLabelColor: string;
   boyImage: StaticImageData;
   listItems: string[][];
   buttons: string[];
+  buttonLabels: string[];
   bulletColor: string;
 }
 
@@ -17,6 +19,8 @@ const Pricing: React.FC<PricingProps> = ({
   boyImage,
   listItems,
   buttons,
+  buttonLabelColor,
+  buttonLabels,
   bulletColor,
 }) => {
   return (
@@ -44,7 +48,7 @@ const Pricing: React.FC<PricingProps> = ({
               width={392}
               height={313}
               alt="Boy"
-              className="w-full max-w-[392px] h-auto"
+              className="w-full max-w-[392px] h-auto rounded-xl"
             />
           </div>
 
@@ -71,12 +75,16 @@ const Pricing: React.FC<PricingProps> = ({
 
             <div className="flex flex-col md:flex-row w-full justify-center md:justify-between mt-10 md:mt-20 gap-4 md:gap-6">
               {buttons.map((btn, idx) => (
-                <button
-                  key={idx}
-                  className="bg-[#FF8D1A] hover:bg-[#d28335] rounded-lg py-3 px-10 md:px-16 w-full md:w-auto text-white font-semibold text-center"
-                >
-                  {btn}
-                </button>
+                <div key={idx} className="flex flex-col items-center">
+                  <button className="bg-[#FF8D1A] hover:bg-[#d28335] rounded-lg py-3 px-10 md:px-16 w-full md:w-auto text-white font-semibold text-center">
+                    {btn}
+                  </button>
+                  <span
+                    className={`${buttonLabelColor} mt-2 text-md font-inter`}
+                  >
+                    {buttonLabels[idx]}
+                  </span>
+                </div>
               ))}
             </div>
           </div>

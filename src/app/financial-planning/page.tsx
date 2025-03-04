@@ -37,6 +37,8 @@ export default function FinancialPlanning() {
     ],
     bulletColor: "bg-black",
     buttons: ["₹1999/-", "₹5999/-", "₹11999/-"],
+    buttonLabels: ["Per Month", "Quarterly", "Semi Annually"],
+    buttonLabelColor: "text-white",
   };
 
   const boxes: BoxItem[] = [

@@ -7,7 +7,9 @@ export interface PricingData {
     boyImage: StaticImageData;
     listItems: string[][];
     buttons: string[];
+    buttonLabels: string[];
     bulletColor: string;
+    buttonLabelColor:string;
   }
 
   export interface BoxItem {
