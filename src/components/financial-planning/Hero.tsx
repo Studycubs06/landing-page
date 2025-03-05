@@ -1,7 +1,6 @@
 import Image from "next/image";
 import heroImage from "../../assets/images/image 44.png";
 import bgImage from "../../assets/images/Vector 87 (1).png";
-import { FaRegCalendarAlt } from "react-icons/fa";
 import BookFreeTrialButton from "../BookFreeTrialButton";
 
 export default function Hero() {
