@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { ClipLoader } from "react-spinners";
+import { LiaTimesSolid } from "react-icons/lia";
 
 export default function PopupForm({
   isOpen,
@@ -25,6 +26,16 @@ export default function PopupForm({
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
+  };
+
+  const handleCourseChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   useEffect(() => {
@@ -80,13 +91,24 @@ export default function PopupForm({
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10"
       onClick={onClose}
     >
       <div
         className="bg-white p-6 shadow-lg w-96 relative"
         onClick={(e) => e.stopPropagation()}
       >
+        <LiaTimesSolid
+          style={{
+            color: "#2AB7CA",
+            fontSize: "20px",
+            position: "absolute",
+            right: "15px",
+            top: "15px",
+          }}
+          className="cursor-pointer"
+          onClick={onClose}
+        />
         {submitted ? (
           <div className="flex flex-col items-center text-center">
             <FaCheckCircle className="text-green-500 text-5xl mb-2" />
@@ -128,15 +150,18 @@ export default function PopupForm({
                 className="border-b-2 border-[#2AB7CA] p-2 w-full outline-none text-sm font-inter text-black"
                 required
               />
-              <input
-                type="text"
+              <select
                 name="course"
                 value={formData.course}
-                onChange={handleChange}
-                placeholder="Course Name"
+                onChange={handleCourseChange}
                 className="border-b-2 border-[#2AB7CA] p-2 w-full outline-none text-sm font-inter text-black"
                 required
-              />
+              >
+                <option value="">Select Course</option>
+                <option value="Public Speakingeact">Public Speaking</option>
+                <option value="Website Development">Website Development</option>
+                <option value="Financial Planning">Financial Planning</option>
+              </select>
               <input
                 type="text"
                 name="grade"

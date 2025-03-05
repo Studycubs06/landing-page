@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
+import BookFreeTrialButton from "./BookFreeTrialButton";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,15 +34,11 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex sm:hidden">
-          <button className="bg-[#0097B2] px-6 py-4 rounded-lg text-white hover:bg-[#007a90]">
-            Book Your Free Trial
-          </button>
+          <BookFreeTrialButton className="bg-[#0097B2] px-6 py-4 rounded-lg text-white hover:bg-[#007a90]" />
         </div>
 
         <div className="md:hidden flex items-center space-x-4 ">
-          <button className="bg-[#0097B2] px-3 py-2 rounded-lg text-white hover:bg-[#007a90] sm:hidden max-[415px]:hidden">
-            Book Your Trial
-          </button>
+          <BookFreeTrialButton className="bg-[#0097B2] px-3 py-2 rounded-lg text-white hover:bg-[#007a90] sm:hidden max-[415px]:hidden" />
           <button onClick={() => setIsOpen(!isOpen)}>
             <GiHamburgerMenu className="w-6 h-6" />
           </button>

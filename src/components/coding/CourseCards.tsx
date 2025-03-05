@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import course1 from "../../assets/images/card1-user.png.png";
-import course2 from "../../assets/images/image (1).png";
-import course3 from "../../assets/images/image 47.png";
+import course1 from "../../assets/images/image 23.png";
+import financeKid from "../../assets/images/finance-kid.png";
+import WebsiteDevelopment from "../../assets/images/WebsiteDevelopment.png";
+
 import shape1 from "../../assets/images/orangeBg.png";
 import shape2 from "../../assets/images/purpleBg.png";
 import shape3 from "../../assets/images/blueBg.png";
@@ -13,7 +14,7 @@ const courses = [
   {
     id: 1,
     name: "Public Speaking",
-    grade: "For Grade 7 - UG",
+    grade: "For Grade 3rd - 12th Grade",
     gradeColor: "text-[#FF8D18]",
     imgSrc: course1,
     shape: shape1,
@@ -23,8 +24,8 @@ const courses = [
   {
     id: 2,
     name: "Financial Planning",
-    grade: "For Grade 3 - 12",
-    imgSrc: course2,
+    grade: "For 7th Grade - UG",
+    imgSrc: financeKid,
     gradeColor: "text-[#A461D8]",
     shape: shape2,
     shapeClass: "w-full h-[90px] sm:h-[120px]",
@@ -33,12 +34,12 @@ const courses = [
   {
     id: 3,
     name: "Website Development",
-    grade: "For Grade 7 - UG",
-    imgSrc: course3,
+    grade: "For 7th Grade - UG",
+    imgSrc: WebsiteDevelopment,
     gradeColor: "text-[#41A1FF]",
     shape: shape3,
     shapeClass: "w-full h-[90px] sm:h-[120px]",
-    link: "/coding",
+    link: "/website-development",
   },
 ];
 

@@ -17,7 +17,7 @@ const CourseCoding = () => {
           </h2>
 
           <Link
-            href={"/coding"}
+            href={"/website-development"}
             className="bg-[#FFBC36] text-[#fff] px-10 py-2 rounded-lg font-bold text-3xl mt-6 hover:bg-[#E6A500] shadow-md hidden md:inline-block"
           >
             Enroll Now
@@ -38,7 +38,7 @@ const CourseCoding = () => {
           />
           <div className="flex justify-center mt-8 md:hidden">
             <Link
-              href={"/coding"}
+              href={"/website-development"}
               className="bg-[#FFBC36] absolute left-[10px] bottom-[-10px] text-[#fff] px-8 py-2 rounded-lg font-bold text-2xl hover:bg-[#E6A500] shadow-md w-full max-w-[300px]"
             >
               Enroll Now
