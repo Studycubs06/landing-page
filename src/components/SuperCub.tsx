@@ -6,12 +6,12 @@ import girlImage from "../assets/images/image 12.png";
 import { Student } from "../../types/data";
 
 const students: Student[] = [
-  { id: 1, name: "Madhuri Dixit", grade: "5th Grade", imgSrc: girlImage },
-  { id: 2, name: "Amit Sharma", grade: "6th Grade", imgSrc: girlImage },
-  { id: 3, name: "Priya Mehta", grade: "4th Grade", imgSrc: girlImage },
-  { id: 4, name: "Madhuri Dixit", grade: "5th Grade", imgSrc: girlImage },
-  { id: 5, name: "Amit Sharma", grade: "6th Grade", imgSrc: girlImage },
-  { id: 6, name: "Amit Sharma", grade: "6th Grade", imgSrc: girlImage },
+  { id: 1, name: "Aryan Verma", grade: "5th Grade", imgSrc: girlImage },
+  { id: 2, name: "Sanya Iyer", grade: "6th Grade", imgSrc: girlImage },
+  { id: 3, name: "Kabir Joshi", grade: "4th Grade", imgSrc: girlImage },
+  { id: 4, name: "Ananya Rao", grade: "5th Grade", imgSrc: girlImage },
+  { id: 5, name: "Rohan Bhatia", grade: "6th Grade", imgSrc: girlImage },
+  { id: 6, name: "Ishika Kapoor", grade: "6th Grade", imgSrc: girlImage },
 ];
 
 const SuperCub = () => {

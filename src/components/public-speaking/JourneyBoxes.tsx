@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { FaRegCalendarAlt } from "react-icons/fa";
 import { BoxItem } from "../../../types/data";
+import BookFreeTrialButton from "../BookFreeTrialButton";
 
 const JourneyBoxes = ({
   title,
@@ -19,7 +19,7 @@ const JourneyBoxes = ({
         <p className="mt-4 text-md text-[#5A7184] font-inter">{description}</p>
       </div>
 
-      <div className="container mx-auto  sm:px-6 px-12 md:px-12 md:py-10 p-0 relative">
+      <div className="container mx-auto  sm:px-6 px-12 md:px-12 md:py-10 p-0 relative z-0">
         <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 relative">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-full md:w-[calc(100%-134px)] h-[15px] bg-yellow-400 z-0"></div>
 
@@ -98,10 +98,7 @@ const JourneyBoxes = ({
       </div>
 
       <div className="flex justify-center text-center px-4">
-        <button className="bg-[#2AB7CA] text-white flex font-inter flex-row gap-5 px-5 py-3 w-[250px] text-xl hover:bg-[#3e949f]">
-          <FaRegCalendarAlt color="white" size={25} />
-          Book a Free Trial
-        </button>
+        <BookFreeTrialButton className="bg-[#2AB7CA] text-[#fff] items-center flex font-inter flex-row gap-5 px-5 py-3 w-[250px] text-xl hover:bg-[#3e949f]" />
       </div>
     </section>
   );

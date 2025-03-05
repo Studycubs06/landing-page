@@ -1,26 +1,29 @@
 import Boxes from "@/components/public-speaking/Boxes";
 import JourneyBoxes from "@/components/public-speaking/JourneyBoxes";
 import Pricing from "@/components/public-speaking/Pricing";
-import bgRectangle from "../../assets/images/Rectangle 491.png";
-import boy from "../../assets/images/image 45.png";
-import budget from "../../assets/images/Budget.png";
-import stock from "../../assets/images/Stock.png";
-import wallet from "../../assets/images/Wallet.png";
+import bgCoding from "../../assets/images/codingBg.jpg";
+import coder from "../../assets/images/coderBoy.jpg";
+import java from "../../assets/images/Java.png";
+import plugIn from "../../assets/images/Plug in.png";
+import UI from "../../assets/images/Ui.png";
 import medal from "../../assets/images/international-math-olympiad.svg fill.png";
-import emp from "../../assets/icons/emp.png";
-import money from "../../assets/icons/money.png";
-import brain from "../../assets/icons/brain.png";
-import reader from "../../assets/icons/reader.png";
-import rupee from "../../assets/icons/rupee.png";
-import Hero from "@/components/financial-planning/Hero";
-import { BoxItem, JourneyBoxItem, PricingData } from "@/../types/data";
+import setting from "../../assets/icons/setting.png";
+import laptop from "../../assets/icons/laptop.png";
+import plug from "../../assets/icons/plug.png";
+import database from "../../assets/icons/database.png";
+import user from "../../assets/icons/user.png";
 
-export default function FinancialPlanning() {
+import { BoxItem, JourneyBoxItem, PricingData } from "@/../types/data";
+import Hero from "@/components/coding/Hero";
+import CourseCards from "@/components/coding/CourseCards";
+import Certificate from "@/components/coding/Certificate";
+
+export default function Coding() {
   const pricingData: PricingData = {
-    bgImage: bgRectangle,
-    textColor: "text-black",
-    title: "Affordable Pricing For You",
-    boyImage: boy,
+    bgImage: bgCoding,
+    textColor: "text-white",
+    title: "Affordable coding lessons",
+    boyImage: coder,
     listItems: [
       [
         "Class Size 5 Students",
@@ -35,7 +38,7 @@ export default function FinancialPlanning() {
         "Flexible Classes",
       ],
     ],
-    bulletColor: "bg-black",
+    bulletColor: "bg-white",
     buttons: ["₹1999/-", "₹5999/-", "₹11999/-"],
     buttonLabels: ["Per Month", "Quarterly", "Semi Annually"],
     buttonLabelColor: "text-white",
@@ -44,9 +47,9 @@ export default function FinancialPlanning() {
   const boxes: BoxItem[] = [
     {
       id: 1,
-      image: budget,
+      image: java,
       title: "Fundamental",
-      description: "Financial Terms ",
+      description: "Web Development",
       hasExtraContent: true,
       hasBorder: true,
       classes: 16,
@@ -56,18 +59,18 @@ export default function FinancialPlanning() {
     },
     {
       id: 2,
-      image: stock,
-      title: "Investment with:",
-      description: "Stock Market",
+      image: UI,
+      title: "Build with:",
+      description: "React Js",
       textAboveImage: true,
       textDesc: "Unlocks at",
       classesText: "32 classes",
     },
     {
       id: 3,
-      image: wallet,
-      title: "Understand:",
-      description: "How money works",
+      image: plugIn,
+      title: "Create with:",
+      description: "Backend Node js",
       classes: 52,
       activity: 6,
       hasExtraContent: true,
@@ -77,51 +80,51 @@ export default function FinancialPlanning() {
     {
       id: 4,
       image: medal,
-      title: "Management",
-      description: "Become Finance Manager",
+      title: "Achived:",
+      description: "Become Full Stack Developer",
       textAboveImage: true,
       textDesc: "Unlocks if you",
       classesText: "sign up for 90 classes",
     },
   ];
 
-  const journeyTitle = "Your Financial Planning Journey";
+  const journeyTitle = "Your Website Development Journey";
   const journeyDescription =
     "Unlock your potential with our structured learning path.";
 
   const boxItems: JourneyBoxItem[] = [
     {
-      image: emp,
-      alt: "Investment",
-      text: "Investment",
+      image: setting,
+      alt: "Fundamentals",
+      text: "Fundamentals",
       bgColorLight: "rgba(255,153,0,0.21)",
       bgColorDark: "#FF9900",
     },
     {
-      image: money,
-      alt: "Money Management",
-      text: "Money Management",
+      image: laptop,
+      alt: "Front-End",
+      text: "Front-End",
       bgColorLight: "rgba(220,155,80,0.21)",
       bgColorDark: "#DC9B50",
     },
     {
-      image: rupee,
-      alt: "Money Psychology",
-      text: "Money Psychology",
+      image: plug,
+      alt: "Backend",
+      text: "Backend",
       bgColorLight: "rgba(252,90,90,0.21)",
       bgColorDark: "#FC5A5A",
     },
     {
-      image: brain,
-      alt: "Decision Making",
-      text: "Decision Making",
+      image: database,
+      alt: "Database",
+      text: "Database",
       bgColorLight: "rgba(61,213,152,0.21)",
       bgColorDark: "#3DD598",
     },
     {
-      image: reader,
-      alt: "Finance ,Taxation Economics & Accounting",
-      text: "Finance ,Taxation Economics & Accounting",
+      image: user,
+      alt: "Live project & interview preparation ",
+      text: "Live project & interview preparation ",
       bgColorLight: "rgba(20,222,235,0.21)",
       bgColorDark: "#14DEEB",
     },
@@ -129,11 +132,12 @@ export default function FinancialPlanning() {
   return (
     <>
       <Hero />
+      <CourseCards />
       <Boxes
-        title="Why Financial Planning?"
-        description="Our activity-based curriculum in financial planning helps students understand the 'Why' behind money management, building confidence in budgeting, investing, and financial decision-making. Your child will gain a strong foundation in financial literacy for life."
+        title="MERNFULL STACK (WEB) DEVELOPMENT"
+        description="StudyCubs offers a comprehensive MERN Full Stack Development course covering React, Node.js, and MongoDB. Gain hands-on experience with real-world projects, expert mentorship, and flexible learning to become a job-ready developer. Affordable, flexible, and designed to help you succeed!"
         resultsText="What results can your child expect to achieve?"
-        enrollText="Enroll now and watch them thrive in every financial decision!"
+        enrollText="Enroll now and watch them excel in every web development project!"
         items={boxItems}
       />
       <JourneyBoxes
@@ -142,6 +146,7 @@ export default function FinancialPlanning() {
         boxes={boxes}
       />
       <Pricing {...pricingData} />
+      <Certificate />
     </>
   );
 }

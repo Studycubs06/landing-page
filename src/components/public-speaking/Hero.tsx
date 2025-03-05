@@ -2,7 +2,7 @@ import Image from "next/image";
 import bgVector from "../../assets/images/WhiteVector.png";
 import heroImage from "../../assets/images/image 40.png";
 import bgImage from "../../assets/images/Vector 87.png";
-import { FaRegCalendarAlt } from "react-icons/fa";
+import BookFreeTrialButton from "../BookFreeTrialButton";
 
 export default function Hero() {
   return (
@@ -31,10 +31,7 @@ export default function Hero() {
           <p className="mt-8 mb-10 text-lg md:text-xl">
             Use public speaking to build confidence and inspire change!
           </p>
-          <button className="bg-[#2AB7CA] text-[#fff] items-center flex font-inter flex-row gap-5 px-5 py-3 w-[250px]  text-xl hover:bg-[#3e949f]">
-            <FaRegCalendarAlt color="white" size={25} />
-            Book a Free Trial
-          </button>
+          <BookFreeTrialButton className="bg-[#2AB7CA] text-[#fff] items-center flex font-inter flex-row gap-5 px-5 py-3 w-[250px] text-xl hover:bg-[#3e949f]" />
         </div>
 
         <div className="md:w-1/2 flex justify-end relative mt-10 md:mt-0">

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { JourneyBoxItem } from "../../../types/data";
+import BookFreeTrialButton from "../BookFreeTrialButton";
 
 const Boxes = ({
   title,
@@ -54,9 +55,7 @@ const Boxes = ({
 
       <div className="max-w-[1200px] mx-auto text-center px-4">
         <h2 className="text-[#00B5CE]">{enrollText}</h2>
-        <button className="bg-[#2AB7CA] w-[250px] text-white py-4 mt-5 hover:bg-[#308490]">
-          Enroll Now
-        </button>
+        <BookFreeTrialButton className="bg-[#2AB7CA] w-[250px] text-white py-4 mt-5 hover:bg-[#308490]" />
       </div>
     </section>
   );

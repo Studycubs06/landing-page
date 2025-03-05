@@ -1,13 +1,9 @@
-"use client";
-
-import React, { useState } from "react";
 import Image from "next/image";
 import bgVector from "../assets/images/Vector.png";
 import heroImage from "../assets/images/image 9.png";
-import PopupForm from "./PopupForm";
+import BookFreeTrialButton from "./BookFreeTrialButton";
 
 const Hero = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
     <section className="bg-[#0097B2] text-white py-16">
       <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center">
@@ -39,17 +35,9 @@ const Hero = () => {
             className="absolute bottom-0 md:bottom-[10px] left-[55%] xs:left-[60%] xlg:left-[65%] transform -translate-x-1/2 w-[60%] md:w-[45%] max-w-md"
           />
 
-          <button
-            onClick={() => setIsPopupOpen(true)}
-            className="bg-[#003366] text-[#fff] px-10 py-3 w-[250px] md:w-[400px] rounded-lg font-bold text-lg md:text-3xl absolute bottom-[-20] md:bottom-[-30px] left-[60%] xlg:left-[65%] transform -translate-x-1/2 hover:bg-[#E6A500] shadow-md"
-          >
-            Book Your Free Trial
-          </button>
+          <BookFreeTrialButton className="bg-[#003366] text-[#fff] px-10 py-3 w-[250px] md:w-[400px] rounded-lg font-bold text-lg md:text-3xl absolute bottom-[-20] md:bottom-[-30px] left-[60%] xlg:left-[65%] transform -translate-x-1/2 hover:bg-[#E6A500] shadow-md" />
         </div>
       </div>
-      {isPopupOpen && (
-        <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-      )}
     </section>
   );
 };

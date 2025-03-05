@@ -27,7 +27,7 @@ const courses = [
     name: "Website development",
     grade: "For Grade 3 - 12",
     imgSrc: course2,
-    link: "/coding",
+    link: "/website-development",
   },
   {
     id: 4,
