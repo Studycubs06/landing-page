@@ -55,15 +55,15 @@ export default function PopupForm({
     setLoading(true);
 
     try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbwD2fbZrtsvVGYOPyZ9Zlh4rHbHLHR4ztD6JaMYKyyIQwsA5W_P8zWUYHjX-0VGJco/exec",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-          mode: "no-cors",
-        }
-      );
+      await fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+        mode: "no-cors",
+      });
 
       setSubmitted(true);
       setLoading(false);
