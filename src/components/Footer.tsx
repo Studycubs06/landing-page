@@ -14,13 +14,13 @@ const Footer = () => {
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <Link href="/" passHref>
-            <h1 className="text-4xl text-[#FFBC36] font-bold font-batangas">
-              Study<span className="text-[#0097B2] font-bold">Cubs</span>
+            <h1 className="text-3xl text-[#0097B2] font-bold font-batangas cursor-pointer">
+              Study<span className="text-[#FFBC36] font-bold">cubs</span>
             </h1>
           </Link>
           <div className="flex space-x-4 mt-3">
             <a
-              href="https://www.instagram.com/studycubs/"
+              href="https://www.instagram.com/Studycubs/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -34,21 +34,21 @@ const Footer = () => {
               <FaLinkedin className="text-4xl cursor-pointer hover:text-gray-300" />
             </a>
             <a
-              href="https://www.facebook.com/studycubs"
+              href="https://www.facebook.com/Studycubs"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebook className="text-4xl cursor-pointer hover:text-gray-300" />
             </a>
             <a
-              href="https://twitter.com/studycubs"
+              href="https://twitter.com/Studycubs"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaTwitter className="text-4xl cursor-pointer hover:text-gray-300" />
             </a>
             <a
-              href="https://youtube.com/@studycubs"
+              href="https://youtube.com/@Studycubs"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -99,11 +99,11 @@ const Footer = () => {
           <p style={{ fontFamily: "Arial, sans-serif", fontWeight: "100" }}>
             Email:{" "}
             <a
-              href="mailto:support@studycubs.com"
+              href="mailto:support@Studycubs.com"
               className="hover:text-gray-300"
               style={{ fontFamily: "Arial, sans-serif", fontWeight: "100" }}
             >
-              support@studycubs.com
+              support@Studycubs.com
             </a>
           </p>
           <p style={{ fontFamily: "Arial, sans-serif", fontWeight: "100" }}>

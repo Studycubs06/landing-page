@@ -11,14 +11,14 @@ const Hero = () => {
           <h2 className="text-3xl md:text-7xl font-bold leading-[1.3]">
             Learn, Play, and Grow with{" "}
             <span className="text-3xl md:text-6xl font-bold bg-[#FFBC36] px-3 py-1 inline-block mt-3 text-[#fff]">
-              StudyCubs
+              Studycubs
             </span>
           </h2>
 
           <p className="mt-4 text-md md:text-xl font-inter">
             Empowering students with essential skills in public speaking,
             coding, and more. Unlock your potential with personalized learning
-            at StudyCubs!
+            at Studycubs!
           </p>
         </div>
 

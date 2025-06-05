@@ -2,9 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import blueVector from "../assets/images/blueVector.png";
 import boyImage from "../assets/images/image 38.png";
+import LinkWithTrackEvent from "./LinkWithTrackEvent";
 
 const Financial = () => {
   return (
@@ -23,12 +23,18 @@ const Financial = () => {
             className="absolute bottom-[10px] md:bottom-[0] left-[45%] xs:left-[35%] lg:left-[40%] transform -translate-x-1/2 w-[80%] md:w-[60%] max-w-md"
           />
 
-          <Link
+          <LinkWithTrackEvent
+            buttonText="Enroll Now"
+            eventName="financial-planning-enroll-now-clicked"
+            eventParams={{
+              category: "Financial Planning",
+              action: "Enroll Now Clicked",
+              label: "Financial Planning Enroll Now Button"
+            }}
             href="/financial-planning"
             className="bg-[#0097B2] text-center absolute bottom-0 left-[-10px] text-[#fff] px-8 py-2 mt-4 rounded-lg font-bold text-2xl hover:bg-[#E6A500] shadow-md block md:hidden w-full max-w-[300px] mx-auto"
-          >
-            Enroll Now
-          </Link>
+          />
+
         </div>
         <div className="md:w-1/2 text-center md:text-left mt-5">
           <h2 className="text-3xl md:text-7xl font-bold leading-[1.3]">
@@ -37,12 +43,18 @@ const Financial = () => {
               choices.
             </span>
           </h2>
-          <Link
+          <LinkWithTrackEvent
+            eventName="financial-planning-enroll-now-clicked"
+            eventParams={{
+              category: "Financial Planning",
+              action: "Enroll Now Clicked",
+              label: "Financial Planning Enroll Now Button"
+            }}
+            buttonText="Enroll Now"
             href="/financial-planning"
             className="bg-[#0097B2] text-[#fff] px-10 py-2 mt-5 rounded-lg font-bold text-3xl hover:bg-[#E6A500] shadow-md hidden md:block w-fit"
-          >
-            Enroll Now
-          </Link>
+          />
+
         </div>
       </div>
     </section>

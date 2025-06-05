@@ -135,7 +135,7 @@ export default function Coding() {
       <CourseCards />
       <Boxes
         title="MERNFULL STACK (WEB) DEVELOPMENT"
-        description="StudyCubs offers a comprehensive MERN Full Stack Development course covering React, Node.js, and MongoDB. Gain hands-on experience with real-world projects, expert mentorship, and flexible learning to become a job-ready developer. Affordable, flexible, and designed to help you succeed!"
+        description="Studycubs offers a comprehensive MERN Full Stack Development course covering React, Node.js, and MongoDB. Gain hands-on experience with real-world projects, expert mentorship, and flexible learning to become a job-ready developer. Affordable, flexible, and designed to help you succeed!"
         resultsText="What results can your child expect to achieve?"
         enrollText="Enroll now and watch them excel in every web development project!"
         items={boxItems}

@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 export const metadata = {
-  title: "Website Development for Students | StudyCubs",
+  title: "Website Development for Students | Studycubs",
   description:
     "Empower students with hands-on website development skills. Learn HTML, CSS, JavaScript, and build real projects. Perfect for 7th grade to UG students.",
   keywords: [
@@ -11,19 +11,19 @@ export const metadata = {
     "Web Design for beginners",
     "Coding for students",
   ],
-  authors: [{ name: "StudyCubs", url: "https://studycubs.com" }],
+  authors: [{ name: "Studycubs", url: "https://Studycubs.com" }],
   openGraph: {
-    title: "Website Development for Students | StudyCubs",
+    title: "Website Development for Students | Studycubs",
     description:
       "Our interactive course helps students master website development with hands-on projects in HTML, CSS, and JavaScript.",
-    url: "https://studycubs.com/website-development",
-    siteName: "StudyCubs",
+    url: "https://Studycubs.com/website-development",
+    siteName: "Studycubs",
     images: [
       {
-        url: "https://studycubs.com/website-development.png",
+        url: "https://Studycubs.com/website-development.png",
         width: 1200,
         height: 630,
-        alt: "Website Development Course - StudyCubs",
+        alt: "Website Development Course - Studycubs",
       },
     ],
     locale: "en_US",
@@ -31,13 +31,13 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development for Students | StudyCubs",
+    title: "Website Development for Students | Studycubs",
     description:
       "Engaging website development course for students to build confidence in coding and web design.",
-    images: ["https://studycubs.com/website-development.png"],
+    images: ["https://Studycubs.com/website-development.png"],
   },
   alternates: {
-    canonical: "https://studycubs.com/website-development",
+    canonical: "https://Studycubs.com/website-development",
   },
 };
 
@@ -54,15 +54,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "Empower students with hands-on website development skills. Learn HTML, CSS, JavaScript, and build real projects. Perfect for 7th grade to UG students.",
             provider: {
               "@type": "Organization",
-              name: "StudyCubs",
-              url: "https://studycubs.com",
+              name: "Studycubs",
+              url: "https://Studycubs.com",
             },
             educationalLevel: "7th Grade - UG",
             offers: {
               "@type": "Offer",
               price: "1999",
               priceCurrency: "INR",
-              url: "https://studycubs.com/website-development",
+              url: "https://Studycubs.com/website-development",
               availability: "https://schema.org/InStock",
             },
           })}

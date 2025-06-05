@@ -18,17 +18,17 @@ const ContactForm = () => {
             </h2>
             <p className="mb-6 md:w-1/2">
               Have questions, feedback, or need assistance? We&apos;re here to listen
-              and support you. Reach out to StudyCubs, and we&apos;ll ensure your
+              and support you. Reach out to Studycubs, and we&apos;ll ensure your
               learning journey is seamless and rewarding!
             </p>
             <p className="text-lg">
               Please mail us :{" "}
-              <a href="mailto:support@studycubs.com">support@studycubs.com</a>
+              <a href="mailto:support@Studycubs.com">support@Studycubs.com</a>
             </p>
             <p className="text-[#019DD7] mt-5">Follow us on</p>
             <div className="flex space-x-4 mt-3">
               <a
-                href="https://www.facebook.com/studycubs"
+                href="https://www.facebook.com/Studycubs"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -39,7 +39,7 @@ const ContactForm = () => {
                 />
               </a>
               <a
-                href="https://twitter.com/studycubs"
+                href="https://twitter.com/Studycubs"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -50,7 +50,7 @@ const ContactForm = () => {
                 />
               </a>
               <a
-                href="https://www.instagram.com/studycubs/"
+                href="https://www.instagram.com/Studycubs/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -72,7 +72,7 @@ const ContactForm = () => {
                 />
               </a>
               <a
-                href="https://youtube.com/@studycubs"
+                href="https://youtube.com/@Studycubs"
                 target="_blank"
                 rel="noopener noreferrer"
               >

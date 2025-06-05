@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import BookFreeTrialButton from "./BookFreeTrialButton";
+import { trackNavigation } from "@/utils/trackCustomEvent";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,23 +13,23 @@ export default function Navbar() {
     <nav className="bg-[#003366] text-white p-4">
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link href="/" passHref>
-          <h1 className="text-3xl text-[#FFBC36] font-bold font-batangas cursor-pointer">
-            Study<span className="text-[#0097B2] font-bold">Cubs</span>
+          <h1 className="text-3xl text-[#0097B2] font-bold font-batangas cursor-pointer">
+            Study<span className="text-[#FFBC36] font-bold">cubs</span>
           </h1>
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-16 uppercase">
-          <Link href="/" className="hover:text-gray-300">
+          <Link href="/" className="hover:text-gray-300" onClick={() => trackNavigation.home()}>
             Home
           </Link>
-          <Link href="/#our-courses" className="hover:text-gray-300">
+          <Link href="/#our-courses" className="hover:text-gray-300" onClick={() => trackNavigation.courses()}>
             Courses
           </Link>
-          <Link href="/contact" className="hover:text-gray-300">
+          <Link href="/contact" className="hover:text-gray-300" onClick={() => trackNavigation.contact()}>
             Contact
           </Link>
-          <Link href="/#about" className="hover:text-gray-300">
+          <Link href="/#about" className="hover:text-gray-300" onClick={() => trackNavigation.about()}>
             About
           </Link>
         </div>
