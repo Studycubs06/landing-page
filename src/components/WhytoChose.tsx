@@ -6,8 +6,8 @@ const WhytoChoose = () => {
       <div className="w-full text-center pb-6">
         <h2 className="text-3xl sm:text-5xl font-bold text-black">
           Why to choose{" "}
-          <span className="text-[#FFBC36] font-bold font-batangas">Study</span>
-          <span className="text-[#0097B2] font-bold">Cubs</span>
+          <span className="text-[#0097B2] font-bold font-batangas">Study</span>
+          <span className="text-[#FFBC36] font-bold">cubs</span>
         </h2>
       </div>
 
@@ -30,7 +30,7 @@ const WhytoChoose = () => {
           <div className="bg-[#0097B2] w-full text-white flex flex-row items-center px-8 py-10 gap-4">
             <h2 className="text-xl md:text-5xl">03.</h2>
             <h2 className="text-xl md:text-4xl">
-              Confidence & Growth: StudyCubs builds confidence, creativity, and
+              Confidence & Growth: Studycubs builds confidence, creativity, and
               life skills for academic and personal success.
             </h2>
           </div>

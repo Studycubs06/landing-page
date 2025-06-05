@@ -19,14 +19,14 @@ export default function Hero() {
         <div className="md:w-1/2 text-white flex flex-col justify-start">
           <h2 className="absolute md:top-[-150px] top-[-90px] text-4xl md:text-4xl leading-[1.3]">
             <span className="font-inter mr-2">Connect with</span>
-            <span className="bg-white text-[#FFC44F] mt-8 mb-10 text-4xl md:text-4xl font-bold md:py-1 px-1">
-              Study<span className="text-[#0097B2] font-bold">Cubs</span>
+            <span className="bg-white text-[#0097B2] mt-8 mb-10 text-4xl md:text-4xl font-bold md:py-1 px-1">
+              Study<span className="text-[#FFC44F] font-bold">cubs</span>
             </span>
           </h2>
           <p className="mt-8 font-inter text-2xl">
             Let’s start a conversation! Whether you have questions, feedback, or
             just want to learn more, we’re here to listen. Reach out to
-            StudyCubs today, and let’s work together to unlock the future of
+            Studycubs today, and let’s work together to unlock the future of
             learning!
           </p>
         </div>

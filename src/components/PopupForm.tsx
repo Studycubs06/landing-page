@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { ClipLoader } from "react-spinners";
 import { LiaTimesSolid } from "react-icons/lia";
+import { trackActions } from "@/utils/trackCustomEvent";
 
 export default function PopupForm({
   isOpen,
@@ -53,7 +54,7 @@ export default function PopupForm({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-
+    trackActions.bookFreeTrial(formData.course, formData.name, formData.grade);
     try {
       await fetch("/api/submit", {
         method: "POST",

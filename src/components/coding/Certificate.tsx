@@ -7,7 +7,7 @@ const Certificate = () => {
     <section className="bg-[#fff] text-black py-16">
       <div className="max-w-[1200px] mx-auto px-4">
         <h1 className="text-3xl font-inter text-center mb-16">
-          Earn Certificate and Become Our Super Cubs
+          Earn Certificate and Become Our Super cubs
         </h1>
 
         <div className="flex flex-col md:flex-row items-start justify-between gap-10 ">
@@ -28,7 +28,7 @@ const Certificate = () => {
               Become Proud Studycubs Alumni
             </p>
             <p className="text-sm font-inter text-[#5A7184]">
-              Earn a certificate upon completing your course at StudyCubs,
+              Earn a certificate upon completing your course at Studycubs,
               showcasing your new skills and achievements! Celebrate your growth
               and expertise with a recognized certification.
             </p>

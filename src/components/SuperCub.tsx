@@ -60,7 +60,7 @@ const SuperCub = () => {
     <section className="text-white">
       <div className="w-full bg-[#FFBC36] text-center py-6">
         <h2 className="text-3xl sm:text-6xl font-bold text-white">
-          Meet our Super Cubs
+          Meet our Super cubs
         </h2>
       </div>
       <div className="container mx-auto p-6 flex flex-col md:flex-row items-center">

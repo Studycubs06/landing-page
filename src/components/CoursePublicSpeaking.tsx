@@ -1,7 +1,7 @@
 import Image from "next/image";
 import blueVector from "../assets/images/blueVector.png";
 import girImage from "../assets/images/girl.png";
-import Link from "next/link";
+import LinkWithTrackEvent from "./LinkWithTrackEvent";
 
 const CoursePublicSpeaking = () => {
   return (
@@ -20,12 +20,18 @@ const CoursePublicSpeaking = () => {
             className="absolute bottom-[30px] md:bottom-[0] left-[50%] md:left-[40%] transform -translate-x-1/2 w-[80%] md:w-[70%] max-w-md"
           />
 
-          <Link
+          <LinkWithTrackEvent
+            buttonText="Enroll Now"
+            eventName="financial-planning-enroll-now-clicked"
+            eventParams={{
+              category: "Public Speaking",
+              action: "Enroll Now Clicked",
+              label: "Public Speaking Enroll Now Button"
+            }}
             href="/financial-planning"
             className="bg-[#0097B2] text-center absolute bottom-0 left-[-10px] text-[#fff] px-8 py-2 mt-4 rounded-lg font-bold text-2xl hover:bg-[#E6A500] shadow-md block md:hidden w-full max-w-[300px] mx-auto"
-          >
-            Enroll Now
-          </Link>
+          />
+
         </div>
 
         <div className="md:w-1/2 mt-5 text-center md:text-left">
@@ -37,12 +43,18 @@ const CoursePublicSpeaking = () => {
             in speaking, reading, and writing.
           </h2>
 
-          <Link
+          <LinkWithTrackEvent
             href={"/public-speaking"}
             className="w-fit bg-[#0097B2] text-[#fff] px-10 py-2 mt-5 rounded-lg font-bold text-3xl hover:bg-[#E6A500] shadow-md hidden md:inline-block"
-          >
-            Enroll Now
-          </Link>
+            buttonText="Enroll Now"
+            eventName="public-speaking-enroll-now-clicked"
+            eventParams={{
+              category: "Public Speaking",
+              action: "Enroll Now Clicked",
+              label: "Public Speaking Enroll Now Button"
+            }}
+          />
+
         </div>
       </div>
     </section>

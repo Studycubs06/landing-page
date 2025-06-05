@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [],
     },
-    sitemap: "https://studycubs.com/sitemap.xml",
+    sitemap: "https://Studycubs.com/sitemap.xml",
   };
 }

@@ -2,27 +2,29 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Head from "next/head";
+import Script from 'next/script'
+import Image from "next/image";
 
 export const metadata = {
-  title: "StudyCubs | Learn Smarter",
+  title: "Studycubs | Learn Smarter",
   description:
     "Studycubs offers personalized online learning for grades 3-10 in subjects like public speaking, English, and creative writing.",
   keywords:
     "online learning, personalized classes, public speaking, English grammar, creative writing, study platform, kids education, grade 3 to 10, personal growth, confidence building",
   og: {
-    title: "StudyCubs - Learning Made Simple!",
+    title: "Studycubs - Learning Made Simple!",
     description:
       "Studycubs offers personalized online classes for students in grades 3 to 10, covering essential academic and life skills. Join our community today!",
   },
   twitter: {
     card: "summary_large_image",
-    title: "StudyCubs - Learning Made Simple!",
+    title: "Studycubs - Learning Made Simple!",
     description:
       "Studycubs offers personalized online classes for students in grades 3 to 10, covering essential academic and life skills. Join our community today!",
   },
   social: {
-    instagram: "https://www.instagram.com/studycubs/",
-    twitter: "https://twitter.com/studycubs",
+    instagram: "https://www.instagram.com/Studycubs/",
+    twitter: "https://twitter.com/Studycubs",
   },
   favicon: "/favicon.ico",
 };
@@ -31,20 +33,30 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <Head>
+        <noscript>
+          <Image
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=685442414285952&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "StudyCubs",
-              url: "https://yourwebsite.com",
+              name: "Studycubs",
+              url: "https://Studycubs.com",
               description:
                 "Empowering students with essential skills in public speaking, coding, and financial planning through personalized learning.",
               publisher: {
                 "@type": "Organization",
-                name: "StudyCubs",
-                logo: "https://yourwebsite.com/logo.png",
+                name: "Studycubs",
+                logo: "https://Studycubs.com/logo.png",
               },
             }),
           }}
@@ -55,8 +67,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
-              name: "StudyCubs",
-              url: "https://yourwebsite.com",
+              name: "Studycubs",
+              url: "https://Studycubs.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Pune",
@@ -64,9 +76,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 addressCountry: "India",
               },
               sameAs: [
-                "https://www.facebook.com/studycubs",
-                "https://www.instagram.com/studycubs",
-                "https://www.linkedin.com/company/studycubs",
+                "https://www.facebook.com/Studycubs",
+                "https://www.instagram.com/Studycubs",
+                "https://www.linkedin.com/company/Studycubs",
               ],
             }),
           }}
@@ -82,19 +94,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://yourwebsite.com",
+                  item: "https://Studycubs.com",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Courses",
-                  item: "https://yourwebsite.com/courses",
+                  item: "https://Studycubs.com/courses",
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: "Contact",
-                  item: "https://yourwebsite.com/contact",
+                  item: "https://Studycubs.com/contact",
                 },
               ],
             }),
@@ -106,7 +118,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ItemList",
-              name: "Courses at StudyCubs",
+              name: "Courses at Studycubs",
               itemListElement: [
                 {
                   "@type": "Course",
@@ -115,7 +127,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     "Develop confidence in speaking, reading, and writing.",
                   provider: {
                     "@type": "EducationalOrganization",
-                    name: "StudyCubs",
+                    name: "Studycubs",
                   },
                 },
                 {
@@ -125,7 +137,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     "Master finance and make smart investment choices.",
                   provider: {
                     "@type": "EducationalOrganization",
-                    name: "StudyCubs",
+                    name: "Studycubs",
                   },
                 },
                 {
@@ -134,7 +146,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   description: "Learn to build websites from scratch.",
                   provider: {
                     "@type": "EducationalOrganization",
-                    name: "StudyCubs",
+                    name: "Studycubs",
                   },
                 },
               ],
@@ -153,7 +165,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   name: "Will this learning platform have the same impact as regular classes?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes! StudyCubs provides interactive sessions that engage students just like regular classes.",
+                    text: "Yes! Studycubs provides interactive sessions that engage students just like regular classes.",
                   },
                 },
                 {
@@ -184,7 +196,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "@type": "Review",
               itemReviewed: {
                 "@type": "EducationalOrganization",
-                name: "StudyCubs",
+                name: "Studycubs",
               },
               reviewRating: {
                 "@type": "Rating",
@@ -196,7 +208,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 name: "Sangeeta Jain",
               },
               reviewBody:
-                "StudyCubs seems to be a promising platform for young kids to learn and grow. The teachers are great at keeping children engaged.",
+                "Studycubs seems to be a promising platform for young kids to learn and grow. The teachers are great at keeping children engaged.",
             }),
           }}
         />
@@ -204,7 +216,26 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <body className="bg-gray-100 text-gray-900">
         <Navbar />
         <main>{children}</main>
+
         <Footer />
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '685442414285952');
+              fbq('track', 'PageView');
+            `
+          }}
+        />
       </body>
     </html>
   );

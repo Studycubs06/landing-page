@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import bgVector from "../assets/images/Vector.png";
 import heroImage from "../assets/images/character (1).png";
-import Link from "next/link";
+import LinkWithTrackEvent from "./LinkWithTrackEvent";
 
 const CourseCoding = () => {
   return (
@@ -12,16 +12,18 @@ const CourseCoding = () => {
           <h2 className="text-3xl md:text-6xl font-bold leading-[1.3]">
             From Beginner to Pro Learn, Code, and Create with{" "}
             <span className="text-3xl  md:text-6xl font-bold bg-[#FFBC36] px-3 py-1 inline-block mt-3 text-[#fff]">
-              StudyCubs!
+              Studycubs!
             </span>
           </h2>
 
-          <Link
-            href={"/website-development"}
-            className="bg-[#FFBC36] text-[#fff] px-10 py-2 rounded-lg font-bold text-3xl mt-6 hover:bg-[#E6A500] shadow-md hidden md:inline-block"
-          >
-            Enroll Now
-          </Link>
+
+          <LinkWithTrackEvent href="/website-development" buttonText="Enroll Now" eventName="website-development-enroll-now-clicked"
+            eventParams={{
+              category: "Website Development",
+              action: "Enroll Now Clicked",
+              label: "Website Development Enroll Now Button"
+            }}
+          />
         </div>
 
         <div className="md:w-1/2 flex justify-end relative mb-10">
@@ -37,12 +39,19 @@ const CourseCoding = () => {
             className="absolute bottom-[30px] left-[50%] xs:left-[60%] xlg:left-[65%] transform -translate-x-1/2 w-[90%] md:w-[70%] max-w-md"
           />
           <div className="flex justify-center mt-8 md:hidden">
-            <Link
+            <LinkWithTrackEvent
               href={"/website-development"}
               className="bg-[#FFBC36] absolute left-[10px] bottom-[-10px] text-[#fff] px-8 py-2 rounded-lg font-bold text-2xl hover:bg-[#E6A500] shadow-md w-full max-w-[300px]"
+              buttonText="Enroll Now"
+              eventName="website-development-enroll-now-clicked"
+              eventParams={{
+                category: "Website Development",
+                action: "Enroll Now Clicked",
+                label: "Website Development Enroll Now Button"
+              }}
             >
-              Enroll Now
-            </Link>
+
+            </LinkWithTrackEvent>
           </div>
         </div>
       </div>

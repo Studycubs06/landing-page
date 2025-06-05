@@ -32,12 +32,12 @@ const CalendarBooking = () => {
             </div>
           )}
 
-          <CalendlyEmbed url="https://calendly.com/studycubs06/studycubs-demo-classes?hide_landing_page_details=1&hide_gdpr_banner=1" />
+          <CalendlyEmbed url="https://calendly.com/studycubs06/Studycubs-demo-classes?hide_landing_page_details=1&hide_gdpr_banner=1" />
         </div>
 
         <div className="md:w-1/2 text-center md:text-right mt-6">
           <h2 className="text-3xl md:text-6xl font-bold space-y-4 flex flex-col">
-            Try a Free Demo and Experience Personalized Learning at StudyCubs!
+            Try a Free Demo and Experience Personalized Learning at Studycubs!
           </h2>
         </div>
       </div>

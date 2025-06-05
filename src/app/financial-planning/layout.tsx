@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 export const metadata = {
-  title: "Financial Planning for Students | StudyCubs",
+  title: "Financial Planning for Students | Studycubs",
   description:
     "Teach your child financial literacy with our engaging financial planning course for students in 7th grade to UG. Build confidence in budgeting, investing, and smart money management.",
   keywords: [
@@ -11,19 +11,19 @@ export const metadata = {
     "Financial Literacy",
     "Investing for teens",
   ],
-  authors: [{ name: "StudyCubs", url: "https://studycubs.com" }],
+  authors: [{ name: "Studycubs", url: "https://Studycubs.com" }],
   openGraph: {
-    title: "Financial Planning for Students | StudyCubs",
+    title: "Financial Planning for Students | Studycubs",
     description:
       "Our activity-based curriculum helps students master financial literacy, from budgeting to investing.",
-    url: "https://studycubs.com/financial-planning",
-    siteName: "StudyCubs",
+    url: "https://Studycubs.com/financial-planning",
+    siteName: "Studycubs",
     images: [
       {
-        url: "https://studycubs.com/finance-kid.png",
+        url: "https://Studycubs.com/finance-kid.png",
         width: 1200,
         height: 630,
-        alt: "Financial Planning Course - StudyCubs",
+        alt: "Financial Planning Course - Studycubs",
       },
     ],
     locale: "en_US",
@@ -31,13 +31,13 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Financial Planning for Students | StudyCubs",
+    title: "Financial Planning for Students | Studycubs",
     description:
       "Engaging financial planning course for students to build confidence in money management.",
-    images: ["https://studycubs.com/finance-kid.png"],
+    images: ["https://Studycubs.com/finance-kid.png"],
   },
   alternates: {
-    canonical: "https://studycubs.com/financial-planning",
+    canonical: "https://Studycubs.com/financial-planning",
   },
 };
 
@@ -54,15 +54,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               "Our activity-based curriculum in financial planning helps students understand the 'Why' behind money management, building confidence in budgeting, investing, and financial decision-making.",
             provider: {
               "@type": "Organization",
-              name: "StudyCubs",
-              url: "https://studycubs.com",
+              name: "Studycubs",
+              url: "https://Studycubs.com",
             },
             educationalLevel: "7th Grade - UG",
             offers: {
               "@type": "Offer",
               price: "1999", // Update if there's a price
               priceCurrency: "INR",
-              url: "https://studycubs.com/financial-planning",
+              url: "https://Studycubs.com/financial-planning",
               availability: "https://schema.org/InStock",
             },
           })}

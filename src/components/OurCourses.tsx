@@ -5,7 +5,7 @@ import course2 from "../assets/images/image 24.png";
 import course3 from "../assets/images/image 25.png";
 import course4 from "../assets/images/image.png";
 import bgImage from "../assets/images/image 22.png";
-import Link from "next/link";
+import LinkWithTrackEvent from "./LinkWithTrackEvent";
 
 const courses = [
   {
@@ -77,13 +77,13 @@ const OurCourses = () => {
               <span className="bg-[#FFF7E6] text-[#FFBC36] px-8 py-1 rounded-lg text-lg font-medium">
                 {course.grade}
               </span>
-
-              <Link
-                href={course.link}
-                className="bg-[#FFBC36] text-white px-8 py-2 text-lg font-semibold"
-              >
-                Book a Free Trial
-              </Link>
+              <LinkWithTrackEvent href={course.link} buttonText="Book a Free Trial" eventName="ViewContent" eventParams={{
+                content_type: "course",
+                content_name: course.name,
+                subject: course.name,
+                grade: course.grade,
+                course_id: course.id,
+              }} />
             </div>
           ))}
         </div>
