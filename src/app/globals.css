@@ -1,13 +1,5 @@
 @import '@fontsource/inter';
 
-@font-face {
-  font-family: 'Batangas';
-  src: url('../assets/fonts/Batangas\ Bold\ 700.otf') format('woff2'),
-       url('../assets/fonts/Batangas\ Bold\ 700.otf') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -36,5 +28,5 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Batangas', 'Inter', Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }

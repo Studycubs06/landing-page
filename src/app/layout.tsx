@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Head from "next/head";
-import Script from 'next/script'
+import Script from "next/script";
 import Image from "next/image";
 
 export const metadata = {
@@ -37,7 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Image
             height="1"
             width="1"
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=685442414285952&ev=PageView&noscript=1"
             alt=""
           />
@@ -213,7 +213,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           }}
         />
       </Head>
-      <body className="bg-gray-100 text-gray-900">
+      <body className="bg-white text-gray-900">
         <Navbar />
         <main>{children}</main>
 
@@ -233,7 +233,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '685442414285952');
               fbq('track', 'PageView');
-            `
+            `,
           }}
         />
       </body>
