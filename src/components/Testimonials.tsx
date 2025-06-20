@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import TestimonialBG from "../assets/images/TestimonialBG.png";
-import UserImg1 from "../assets/images/user1.png";
-import UserImg2 from "../assets/images/user2.png";
-import UserImg3 from "../assets/images/user3.png";
+import TestimonialBG from "../assets/images/TestimonialBG.webp";
+import UserImg1 from "../assets/images/user1.webp";
+import UserImg2 from "../assets/images/user2.webp";
+import UserImg3 from "../assets/images/user3.webp";
 import { FaBook, FaStar } from "react-icons/fa";
 
 const testimonials = [

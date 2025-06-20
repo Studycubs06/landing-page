@@ -1,11 +1,11 @@
 import Image from "next/image";
-import HeroBG from "../assets/images/HeroBG.png";
+import HeroBG from "../assets/images/HeroBG.webp";
 import BookFreeTrialButton from "./BookFreeTrialButton";
 import BlueShape from "../assets/images/BlueShape.webp";
-import YellowShape from "../assets/images/YellowShape.png";
+import YellowShape from "../assets/images/YellowShape.webp";
 import Boy from "../assets/images/boy.webp";
 import Girl from "../assets/images/girl.webp";
-import Students from "../assets/images/students.png";
+import Students from "../assets/images/students.webp";
 
 const Hero = () => {
   return (

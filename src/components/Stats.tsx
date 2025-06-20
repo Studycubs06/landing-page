@@ -1,11 +1,11 @@
 import React from "react";
 
-import Star from "../assets/images/star.png";
+import Star from "../assets/images/star.webp";
 import Image from "next/image";
-import Stud from "../assets/images/stud.png";
-import Group from "../assets/images/group.png";
-import Hand from "../assets/images/hand.png";
-import Courses from "../assets/images/courses.png";
+import Stud from "../assets/images/stud.webp";
+import Group from "../assets/images/group.webp";
+import Hand from "../assets/images/hand.webp";
+import Courses from "../assets/images/courses.webp";
 
 const statsData = [
   {
