@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import AboutBg from "../assets/images/AboutBG.png";
+import AboutBg from "../assets/images/AboutBG.webp";
 import BookFreeTrialButton from "./BookFreeTrialButton";
 import SmallGirl from "../assets/images/smallGirl.png";
-import BigGirl from "../assets/images/bigGirl.png";
+import BigGirl from "../assets/images/bigGirl.webp";
 import Students from "../assets/images/students.png";
 import SmallRing from "../assets/images/smallRing.png";
-import BigRing from "../assets/images/bigRing.png";
+import BigRing from "../assets/images/bigRing.webp";
 import { FaBook, FaCheckCircle } from "react-icons/fa";
 
 const AboutUs = () => {
@@ -73,7 +73,7 @@ const AboutUs = () => {
         </div>
 
         {/* Content */}
-        <div className="md:w-1/2 text-center md:text-left">
+        <div className="md:w-1/2 text-center md:text-left" id="about">
           <div className="flex justify-center md:justify-start items-center gap-3">
             <FaBook color="#FFBC36" />
             <h2 className="text-[#FFBC36] font-semibold">ABOUT US</h2>
@@ -124,7 +124,7 @@ const AboutUs = () => {
 
           {/* CTA Button */}
           <div className="mt-5 hidden md:flex sm:hidden">
-            <BookFreeTrialButton className="bg-[#FFBC36] px-10 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#ffd930]" />
+            <BookFreeTrialButton className="flash-button bg-[#FFBC36] px-10 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#ffd930]" />
           </div>
         </div>
       </div>

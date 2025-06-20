@@ -1,5 +1,5 @@
 import React from "react";
-import ABC from "../assets/images/abc.png";
+import ABC from "../assets/images/abc.webp";
 import School from "../assets/images/school.png";
 import Teacher from "../assets/images/teacher.png";
 import Image from "next/image";

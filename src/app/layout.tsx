@@ -102,12 +102,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   name: "Courses",
                   item: "https://Studycubs.com/courses",
                 },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Contact",
-                  item: "https://Studycubs.com/contact",
-                },
+                // {
+                //   "@type": "ListItem",
+                //   position: 3,
+                //   name: "Contact",
+                //   item: "https://Studycubs.com/contact",
+                // },
               ],
             }),
           }}

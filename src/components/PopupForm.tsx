@@ -92,7 +92,7 @@ export default function PopupForm({
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[1000000]"
       onClick={onClose}
     >
       <div

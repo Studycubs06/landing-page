@@ -67,7 +67,7 @@ const WhytoChose = () => {
 
           {/* CTA Button */}
           <div className="mt-5 hidden md:flex sm:hidden">
-            <FindEventsButton className="bg-[#2AB7CA] px-6 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#2AB7CA]" />
+            <FindEventsButton className="flash-button bg-[#2AB7CA] px-6 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#2AB7CA]" />
           </div>
         </div>
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { FaBook } from "react-icons/fa";
 import Image from "next/image";
-import Bird from "../assets/images/birds.png";
-import Curry from "../assets/images/curry.png";
-import diaz from "../assets/images/diaz.png";
+import Bird from "../assets/images/birds.webp";
+import Curry from "../assets/images/curry.webp";
+import diaz from "../assets/images/diaz.webp";
 import Jimmy from "../assets/images/jimmy.png";
 import Micheal from "../assets/images/micheal.png";
 import { PiMedalFill } from "react-icons/pi";

@@ -58,13 +58,13 @@ export const trackNavigation = {
     });
   },
 
-  contact: () => {
-    trackCustomEvent("ViewContent", {
-      content_type: "navigation",
-      content_name: "Contact Page",
-      content_category: "contact_info",
-    });
-  },
+  // contact: () => {
+  //   trackCustomEvent("ViewContent", {
+  //     content_type: "navigation",
+  //     content_name: "Contact Page",
+  //     content_category: "contact_info",
+  //   });
+  // },
 
   about: () => {
     trackCustomEvent("ViewContent", {
@@ -134,39 +134,39 @@ export const trackCourseInterest = {
   },
 };
 
-export const trackFormSubmissions = {
-  contactForm: (formData: {
-    name?: string;
-    email?: string;
-    grade?: string;
-    subject?: string;
-  }) => {
-    trackCustomEvent("CompleteRegistration", {
-      content_type: "contact_form",
-      content_name: "Contact Form Submission",
-      registration_method: "contact_form",
-      student_grade: formData.grade || "unknown",
-      subject_interest: formData.subject || "general",
-      student_name: formData.name || "unknown",
-      student_email: formData.email || "unknown",
-    });
-  },
+// export const trackFormSubmissions = {
+//   contactForm: (formData: {
+//     name?: string;
+//     email?: string;
+//     grade?: string;
+//     subject?: string;
+//   }) => {
+//     trackCustomEvent("CompleteRegistration", {
+//       content_type: "contact_form",
+//       content_name: "Contact Form Submission",
+//       registration_method: "contact_form",
+//       student_grade: formData.grade || "unknown",
+//       subject_interest: formData.subject || "general",
+//       student_name: formData.name || "unknown",
+//       student_email: formData.email || "unknown",
+//     });
+//   },
 
-  trialBooking: (formData: {
-    name?: string;
-    email?: string;
-    grade?: string;
-    subject?: string;
-  }) => {
-    trackCustomEvent("CompleteRegistration", {
-      content_type: "trial_booking",
-      content_name: "Free Trial Booking",
-      registration_method: "trial_form",
-      student_grade: formData.grade || "unknown",
-      subject_interest: formData.subject || "general",
-      trial_type: "free",
-      student_name: formData.name || "unknown",
-      student_email: formData.email || "unknown",
-    });
-  },
-};
+//   trialBooking: (formData: {
+//     name?: string;
+//     email?: string;
+//     grade?: string;
+//     subject?: string;
+//   }) => {
+//     trackCustomEvent("CompleteRegistration", {
+//       content_type: "trial_booking",
+//       content_name: "Free Trial Booking",
+//       registration_method: "trial_form",
+//       student_grade: formData.grade || "unknown",
+//       subject_interest: formData.subject || "general",
+//       trial_type: "free",
+//       student_name: formData.name || "unknown",
+//       student_email: formData.email || "unknown",
+//     });
+//   },
+// };

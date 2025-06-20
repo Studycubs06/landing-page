@@ -8,34 +8,34 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import Image from "next/image";
-import BoyMic from "../assets/images/boyMic.png";
-import Girl from "../assets/images/girlMoney.png";
+import BoyMic from "../assets/images/boyMic.webp";
+import Girl from "../assets/images/girlMoney.webp";
 import Boy from "../assets/images/VrBoy.png";
 import { HiDocumentText } from "react-icons/hi";
-import Bird from "../assets/images/birds.png";
+import Bird from "../assets/images/birds.webp";
 
 const courseData = [
   {
     title: "Public Speaking And Spoken English",
     rating: 4.7,
-    features: ["8 Weeks", "30+ Students", "Live Sessions"],
-    price: "999",
+    features: ["3 Levels", "6 months", "students 1k"],
+    price: "1499",
     image: BoyMic,
     grade: "3rd - 12th Grade",
   },
   {
-    title: "Creative Writing For Kids",
-    rating: 4.8,
-    features: ["6 Weeks", "20+ Students", "Interactive Tasks"],
-    price: "899",
+    title: "Financial Planning with stock market",
+    rating: 4.7,
+    features: ["3 Levels", "3 months", "students 100+"],
+    price: "1999",
     image: Girl,
     grade: "7th - Under Graduate",
   },
   {
-    title: "Basic Coding and Logic",
-    rating: 4.9,
-    features: ["10 Weeks", "50+ Students", "Project-Based"],
-    price: "1199",
+    title: "Artificial intelligent with python and mern stack ",
+    rating: 4.7,
+    features: ["4 Levels", "6 months", "students 100+"],
+    price: "1999",
     image: Boy,
     grade: "7th - Under Graduate",
   },
@@ -43,7 +43,7 @@ const courseData = [
 
 const TopCourses = () => {
   return (
-    <section className="relative bg-[#FFF8F0] w-full py-20 text-black overflow-hidden">
+    <section className="relative bg-[#FFF8F0] w-full py-20 text-black overflow-hidden" id="our-courses">
       <Image
         src={Bird}
         alt="bird"
