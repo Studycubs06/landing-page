@@ -1,17 +1,21 @@
 import { google } from "googleapis";
 import { NextRequest, NextResponse } from "next/server";
 
-type SheetForm = {
+export type SheetForm = {
   name: string;
   email: string;
   phone: string;
   course: string;
   grade: string;
+  parent: string;
+  date: string;
+  time: string;
 };
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { name, email, phone, course, grade } = body as SheetForm;
+  const { name, email, phone, course, grade, parent, date, time } =
+    body as SheetForm;
 
   const creds = {
     client_email: process.env.GOOGLE_CLIENT_EMAIL,
@@ -32,10 +36,10 @@ export async function POST(req: NextRequest) {
     const sheets = google.sheets({ version: "v4", auth });
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: "A1:E1",
+      range: "A1:H1",
       valueInputOption: "USER_ENTERED",
       requestBody: {
-        values: [[name, email, phone, course, grade]],
+        values: [[name, email, phone, course, grade, parent, date, time]],
       },
     });
 

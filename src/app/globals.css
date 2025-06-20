@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: 'Batangas', 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @tailwind base;
@@ -74,4 +74,3 @@ body {
     }
   }
 }
-

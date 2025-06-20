@@ -1,15 +1,12 @@
 "use client";
-import React, { useState } from "react";
-import PopupForm from "./PopupForm";
+import React from "react";
 import { trackCustomEvent } from "@/utils/trackCustomEvent";
+import Link from "next/link";
 
 function BookFreeTrialButton({ className }: { className?: string }) {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
   return (
     <div>
-      <button onClick={() => {
-        setIsPopupOpen(true);
+      <Link href="/book-free-trial" onClick={() => {
         trackCustomEvent("book_free_trial_button_clicked", {
           content_type: "button",
           content_name: "Book Free Trial Button",
@@ -17,10 +14,7 @@ function BookFreeTrialButton({ className }: { className?: string }) {
         });
       }} className={className}>
         Book Your Free Trial
-      </button>
-      {isPopupOpen && (
-        <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-      )}
+      </Link>
     </div>
   );
 }

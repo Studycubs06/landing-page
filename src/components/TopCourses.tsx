@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   FaBook,
@@ -13,6 +15,7 @@ import Girl from "../assets/images/girlMoney.webp";
 import Boy from "../assets/images/VrBoy.webp";
 import { HiDocumentText } from "react-icons/hi";
 import Bird from "../assets/images/birds.webp";
+import { useRouter } from "next/navigation";
 
 const courseData = [
   {
@@ -22,6 +25,7 @@ const courseData = [
     price: "1499",
     image: BoyMic,
     grade: "3rd - 12th Grade",
+    path: "/public-speaking",
   },
   {
     title: "Financial Planning with stock market",
@@ -30,6 +34,7 @@ const courseData = [
     price: "1999",
     image: Girl,
     grade: "7th - Under Graduate",
+    path: "/financial-planning",
   },
   {
     title: "Artificial intelligent with python and mern stack ",
@@ -38,12 +43,17 @@ const courseData = [
     price: "1999",
     image: Boy,
     grade: "7th - Under Graduate",
+    path: "/artificial-intelligence",
   },
 ];
 
 const TopCourses = () => {
+  const router = useRouter();
   return (
-    <section className="relative bg-[#FFF8F0] w-full py-20 text-black overflow-hidden" id="our-courses">
+    <section
+      className="relative bg-[#FFF8F0] w-full py-20 text-black overflow-hidden"
+      id="our-courses"
+    >
       <Image
         src={Bird}
         alt="bird"
@@ -133,7 +143,10 @@ const TopCourses = () => {
                   </div>
                 </div>
 
-                <button className="bg-[#FE543D] text-white px-4 py-2 text-sm rounded-full hover:bg-[#be4d3e] transition-all">
+                <button
+                  onClick={() => router.push(course.path)}
+                  className="bg-[#FE543D] text-white px-4 py-2 text-sm rounded-full hover:bg-[#be4d3e] transition-all"
+                >
                   View More
                 </button>
               </div>
