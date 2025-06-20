@@ -161,7 +161,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            <div className="mb-2">
               <h3 className="text-lg font-semibold mb-4">Subscribe</h3>
               <div className="bg-white px-4 py-2">
                 <input

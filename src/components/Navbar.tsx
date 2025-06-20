@@ -55,7 +55,7 @@ export default function Navbar() {
       <nav className="bg-[#fff] text-black p-2">
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
           <Link href="/" passHref>
-            <h1 className="text-3xl text-[#0097B2] font-bold cursor-pointer">
+            <h1 className="text-3xl text-[#0097B2] font-Batangas cursor-pointer">
               Study<span className="text-[#FFBC36] font-bold">cubs</span>
             </h1>
           </Link>
@@ -76,13 +76,13 @@ export default function Navbar() {
             >
               Courses
             </Link>
-            <Link
+            {/* <Link
               href="/contact"
               className="hover:text-gray-300 text-xs font-regular"
               onClick={() => trackNavigation.contact()}
             >
               Contact
-            </Link>
+            </Link> */}
             <Link
               href="/#about"
               className="hover:text-gray-300 text-xs font-regular"
@@ -93,7 +93,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex sm:hidden">
-            <BookFreeTrialButton className="bg-[#FFBC36] px-10 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#ffd930]" />
+            <BookFreeTrialButton className="flash-button bg-[#FFBC36] px-10 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#ffd930]" />
           </div>
 
           <div className="md:hidden flex items-center space-x-4 ">
@@ -105,16 +105,16 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden flex flex-col items-center bg-[#003366] space-y-4 py-4">
+          <div className="md:hidden flex flex-col items-center bg-[#fff] space-y-4 py-4">
             <Link href="/" className="hover:text-gray-300">
               Home
             </Link>
             <Link href="/#our-courses" className="hover:text-gray-300">
               Courses
             </Link>
-            <Link href="/contact" className="hover:text-gray-300">
+            {/* <Link href="/contact" className="hover:text-gray-300">
               Contact
-            </Link>
+            </Link> */}
             <Link href="/#about" className="hover:text-gray-300">
               About
             </Link>

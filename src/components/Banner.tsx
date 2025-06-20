@@ -16,7 +16,7 @@ const Banner = () => {
       />
 
       {/* Tiger Boy Image - Centered */}
-      <div className="absolute top-[80] xlg:top-[180] inset-0 flex items-center justify-center z-10">
+      <div className="absolute bottom-[-70px] top-[80] xlg:top-[180] inset-0 flex items-center justify-center z-10">
         <Image
           src={TigerBoy}
           alt="Tiger Boy"

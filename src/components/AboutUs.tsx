@@ -124,7 +124,7 @@ const AboutUs = () => {
 
           {/* CTA Button */}
           <div className="mt-5 hidden md:flex sm:hidden">
-            <BookFreeTrialButton className="bg-[#FFBC36] px-10 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#ffd930]" />
+            <BookFreeTrialButton className="flash-button bg-[#FFBC36] px-10 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#ffd930]" />
           </div>
         </div>
       </div>
