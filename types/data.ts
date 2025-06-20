@@ -45,6 +45,7 @@ export interface Student {
 export interface StatItem {
   title: string;
   subtitle: string;
+  icon: StaticImageData;
 }
 
 // Define the type for a single feature item

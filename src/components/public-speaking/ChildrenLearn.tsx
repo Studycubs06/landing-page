@@ -9,6 +9,7 @@ import icon7 from "../../assets/images/icon7.webp";
 import icon8 from "../../assets/images/icon8.webp";
 import icon9 from "../../assets/images/icon9.webp";
 import Image from "next/image";
+import { StatItem } from "../../../types/data";
 
 const boxData = [
   [
@@ -75,11 +76,7 @@ const boxData = [
 
 const ChildrenLearn = ({ bgColor, stats }: {
   bgColor: string;
-  stats: {
-    icon: string;
-    title: string;
-    subtitle: string;
-  }[];
+  stats: StatItem[];
 }) => {
   return (
     <section className="relative w-full py-20 h-auto text-black overflow-hidden">
@@ -124,11 +121,7 @@ const ChildrenLearn = ({ bgColor, stats }: {
         <div className="container mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8">
           {/* Mobile: 2x2 Grid, Tablet+: Single Row */}
           <div className="flex flex-wrap justify-between items-center gap-y-6">
-            {stats.map((item: {
-              icon: string;
-              title: string;
-              subtitle: string;
-            }, idx: number) => (
+            {stats.map((item: StatItem, idx: number) => (
               <div
                 key={idx}
                 className="text-white flex flex-col sm:flex-row items-center sm:gap-4 text-center sm:text-left min-w-[180px]"
