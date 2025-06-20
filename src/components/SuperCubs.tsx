@@ -4,8 +4,8 @@ import Image from "next/image";
 import Bird from "../assets/images/birds.webp";
 import Curry from "../assets/images/curry.webp";
 import diaz from "../assets/images/diaz.webp";
-import Jimmy from "../assets/images/jimmy.png";
-import Micheal from "../assets/images/micheal.png";
+import Jimmy from "../assets/images/jimmy.webp";
+import Micheal from "../assets/images/micheal.webp";
 import { PiMedalFill } from "react-icons/pi";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 

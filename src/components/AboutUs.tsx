@@ -2,10 +2,10 @@ import Image from "next/image";
 import React from "react";
 import AboutBg from "../assets/images/AboutBG.webp";
 import BookFreeTrialButton from "./BookFreeTrialButton";
-import SmallGirl from "../assets/images/smallGirl.png";
+import SmallGirl from "../assets/images/smallGirl.webp";
 import BigGirl from "../assets/images/bigGirl.webp";
-import Students from "../assets/images/students.png";
-import SmallRing from "../assets/images/smallRing.png";
+import Students from "../assets/images/students.webp";
+import SmallRing from "../assets/images/smallRing.webp";
 import BigRing from "../assets/images/bigRing.webp";
 import { FaBook, FaCheckCircle } from "react-icons/fa";
 

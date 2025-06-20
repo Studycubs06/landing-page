@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import PatternBG from "../assets/images/patternBG.png";
-import TigerBoy from "../assets/images/tigerBoy.png";
+import PatternBG from "../assets/images/patternBG.webp";
+import TigerBoy from "../assets/images/tigerBoy.webp";
 
 const Banner = () => {
   return (

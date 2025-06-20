@@ -1,7 +1,7 @@
 import React from "react";
 import ABC from "../assets/images/abc.webp";
-import School from "../assets/images/school.png";
-import Teacher from "../assets/images/teacher.png";
+import School from "../assets/images/school.webp";
+import Teacher from "../assets/images/teacher.webp";
 import Image from "next/image";
 
 const AboutUsBoxes = () => {

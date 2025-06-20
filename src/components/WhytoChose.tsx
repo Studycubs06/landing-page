@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import chooseUsBG from "../assets/images/ChooseUsBG.png";
-import SchoolGirl from "../assets/images/schoolGirl.png";
+import chooseUsBG from "../assets/images/ChooseUsBG.webp";
+import SchoolGirl from "../assets/images/schoolGirl.webp";
 import { FaBook, FaCheck } from "react-icons/fa";
 import FindEventsButton from "./FindEventsButton";
 

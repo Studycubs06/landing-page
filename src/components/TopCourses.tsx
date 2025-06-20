@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import BoyMic from "../assets/images/boyMic.webp";
 import Girl from "../assets/images/girlMoney.webp";
-import Boy from "../assets/images/VrBoy.png";
+import Boy from "../assets/images/VrBoy.webp";
 import { HiDocumentText } from "react-icons/hi";
 import Bird from "../assets/images/birds.webp";
 
