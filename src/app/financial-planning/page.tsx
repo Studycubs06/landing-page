@@ -6,33 +6,9 @@ import Teaching from "../../assets/images/teaching.webp";
 import Writing from "../../assets/images/writing.webp";
 import Mobile from "../../assets/images/mobile.webp";
 
-import Stud from "../../assets/images/stud.webp";
-import Group from "../../assets/images/group.webp";
-import Hand from "../../assets/images/hand.webp";
-import Course from "../../assets/images/courses.webp";
+import { FINANCIAL_TESTIMONIALS } from "@/constants/testimonials";
+import { FINANCIAL_STATS } from "@/constants/statsData";
 
-const statsData = [
-  {
-    icon: Stud,
-    title: "3K+",
-    subtitle: "Successfully Trained",
-  },
-  {
-    icon: Hand,
-    title: "15K+",
-    subtitle: "Classes Completed",
-  },
-  {
-    icon: Group,
-    title: "97K+",
-    subtitle: "Satisfaction Rate",
-  },
-  {
-    icon: Course,
-    title: "102K+",
-    subtitle: "Students Community",
-  },
-];
 
 const featureData = [
   {
@@ -79,18 +55,20 @@ const featureData = [
   },
 ];
 
-const page = () => {
+const FinancialPlanning = () => {
   return (
     <InternalPage
-      Boy={Boy}
-      HeroBG={HeroBG}
+      heroTitle="Join our Financial Planning Program"
+      heroSubtitle="Empowering students with personalized financial literacy experiences."
+      heroImage={Boy}
+      bgImage={HeroBG}
       bgColor={"bg-[#FFBC36]"}
-      stats={statsData}
+      stats={FINANCIAL_STATS}
       featureData={featureData}
-      TestiTitle="Creating A Community Of
-Life Long Learners."
+      title="Creating A Community Of Life Long Learners."
+      testimonials={FINANCIAL_TESTIMONIALS} // Pass testimonials here
     />
   );
 };
 
-export default page;
+export default FinancialPlanning;

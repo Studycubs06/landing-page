@@ -6,33 +6,8 @@ import Teaching from "../../assets/images/teaching.webp";
 import Writing from "../../assets/images/writing.webp";
 import Mobile from "../../assets/images/mobile.webp";
 
-import Stud from "../../assets/images/stud.webp";
-import Group from "../../assets/images/group.webp";
-import Hand from "../../assets/images/hand.webp";
-import Course from "../../assets/images/courses.webp";
-
-const statsData = [
-  {
-    icon: Stud,
-    title: "90",
-    subtitle: "Number of class",
-  },
-  {
-    icon: Hand,
-    title: "90hrs",
-    subtitle: "Duration",
-  },
-  {
-    icon: Group,
-    title: "3L",
-    subtitle: "Levels",
-  },
-  {
-    icon: Course,
-    title: "6m",
-    subtitle: "Months",
-  },
-];
+import { PUBLIC_SPEAKING_TESTIMONIALS } from "@/constants/testimonials";
+import { PUBLIC_SPEAKING_STATS } from "@/constants/statsData";
 
 const featureData = [
   {
@@ -79,17 +54,20 @@ const featureData = [
   },
 ];
 
-const page = () => {
+const PublicSpeaking = () => {
   return (
     <InternalPage
-      Boy={Boy}
-      HeroBG={HeroBG}
+      heroTitle="Join our Public Speaking Program"
+      heroSubtitle="Empowering students with personalized communication experiences."
+      heroImage={Boy}
+      bgImage={HeroBG}
       bgColor={"bg-[#704FE6]"}
-      stats={statsData}
+      stats={PUBLIC_SPEAKING_STATS}
       featureData={featureData}
-      TestiTitle="Parents love towards studcubs"
+      title="Parents love towards studcubs"
+      testimonials={PUBLIC_SPEAKING_TESTIMONIALS}
     />
   );
 };
 
-export default page;
+export default PublicSpeaking;
