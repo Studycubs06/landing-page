@@ -5,33 +5,8 @@ import HeroBG from "../../assets/images/greenBG.webp";
 import Teaching from "../../assets/images/teaching.webp";
 import Writing from "../../assets/images/writing.webp";
 import Mobile from "../../assets/images/mobile.webp";
-import Stud from "../../assets/images/stud.webp";
-import Group from "../../assets/images/group.webp";
-import Hand from "../../assets/images/hand.webp";
-import Course from "../../assets/images/courses.webp";
-
-const statsData = [
-  {
-    icon: Stud,
-    title: "3K+",
-    subtitle: "Successfully Trained",
-  },
-  {
-    icon: Hand,
-    title: "15K+",
-    subtitle: "Classes Completed",
-  },
-  {
-    icon: Group,
-    title: "97K+",
-    subtitle: "Satisfaction Rate",
-  },
-  {
-    icon: Course,
-    title: "102K+",
-    subtitle: "Students Community",
-  },
-];
+import { AI_TESTIMONIALS } from "@/constants/testimonials";
+import { AI_STATS } from "@/constants/statsData";
 
 const featureData = [
   {
@@ -78,18 +53,20 @@ const featureData = [
   },
 ];
 
-const page = () => {
+const AI = () => {
   return (
     <InternalPage
-      Boy={Boy}
-      HeroBG={HeroBG}
+      heroTitle="Empower Your Child with AI Skills"
+      heroSubtitle="Join our AI course to equip your child with the skills of the future."
+      heroImage={Boy}
+      bgImage={HeroBG}
       bgColor={"bg-[#2AB7CA]"}
-      stats={statsData}
+      stats={AI_STATS}
       featureData={featureData}
-      TestiTitle="Creating A Community Of
-Life Long Learners."
+      title="Creating A Community Of Life Long Learners."
+      testimonials={AI_TESTIMONIALS}
     />
   );
 };
 
-export default page;
+export default AI;

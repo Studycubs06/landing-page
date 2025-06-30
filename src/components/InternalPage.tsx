@@ -1,26 +1,29 @@
 import React from "react";
-import Hero from "./public-speaking/Hero";
-import ChildrenLearn from "./public-speaking/ChildrenLearn";
-import Journey from "./public-speaking/Journey";
-import Features from "./public-speaking/Features";
-import Testimonials from "./public-speaking/Testimonials";
+import Hero from "./common/Hero";
+import { Stats } from "./common/Stats";
+import Journey from "./common/Journey";
+import Features from "./common/Features";
+import Testimonials from "./common/Testimonials";
 import { InternalPageProps } from "../../types/data";
 
 const InternalPage: React.FC<InternalPageProps> = ({
-  Boy,
-  HeroBG,
+  heroImage,
+  bgImage,
   bgColor,
   stats,
   featureData,
-  TestiTitle,
+  title,
+  testimonials,
+  heroTitle,
+  heroSubtitle
 }) => {
   return (
     <>
-      <Hero Boy={Boy} HeroBG={HeroBG} />
-      <ChildrenLearn bgColor={bgColor} stats={stats} />
+      <Hero bgImage={bgImage} heroImage={heroImage} title={heroTitle} subtitle={heroSubtitle} />
+      <Stats bgColor={bgColor} stats={stats} />
       <Journey />
       <Features featureData={featureData} />
-      <Testimonials TestiTitle={TestiTitle} />
+      <Testimonials title={title} testimonials={testimonials} />
     </>
   );
 };

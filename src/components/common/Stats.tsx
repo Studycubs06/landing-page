@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import icon1 from "../../assets/images/icon1.webp";
 import icon2 from "../../assets/images/icon2.webp";
 import icon3 from "../../assets/images/icon3.webp";
@@ -74,10 +77,27 @@ const boxData = [
   ],
 ];
 
-const ChildrenLearn = ({ bgColor, stats }: {
+// Utility: extract the number for animation, and suffix (K, +, etc)
+function parseStatTitle(title: string) {
+  const match = title.match(/^([\d,.]+)([a-zA-Z+]+)?/); // e.g. "10K+" => ["10K+", "10", "K+"]
+  if (!match) return { number: null, suffix: title };
+  const number = parseFloat(match[1].replace(/,/g, ''));
+  const suffix = match[2] || "";
+  return { number, suffix };
+}
+
+const Stats = ({
+  bgColor,
+  stats,
+}: {
   bgColor: string;
   stats: StatItem[];
 }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2, // Animate when 20% in view
+  });
+
   return (
     <section className="relative w-full py-20 h-auto text-black overflow-hidden">
       {/* Section Heading */}
@@ -116,27 +136,43 @@ const ChildrenLearn = ({ bgColor, stats }: {
 
       {/* Stats Section - Responsive */}
       <div
+        ref={ref}
         className={`${bgColor} rounded-lg sm:rounded-full mt-20 mx-4 sm:mx-8 md:mx-[120px] xlg:mx-[170px]`}
       >
         <div className="container mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8">
-          {/* Mobile: 2x2 Grid, Tablet+: Single Row */}
           <div className="flex flex-wrap justify-between items-center gap-y-6">
-            {stats.map((item: StatItem, idx: number) => (
-              <div
-                key={idx}
-                className="text-white flex flex-col sm:flex-row items-center sm:gap-4 text-center sm:text-left min-w-[180px]"
-              >
-                <div className="bg-white h-12 w-12 sm:h-14 sm:w-14 flex justify-center items-center rounded-full mb-2 sm:mb-0">
-                  <Image src={item.icon} alt="icon" width={20} height={20} />
+            {stats.map((item: StatItem, idx: number) => {
+              // If it's a numeric stat, animate it
+              const { number, suffix } = parseStatTitle(item.title);
+
+              return (
+                <div
+                  key={idx}
+                  className="text-white flex flex-col sm:flex-row items-center sm:gap-4 text-center sm:text-left min-w-[180px]"
+                >
+                  <div className="bg-white h-12 w-12 sm:h-14 sm:w-14 flex justify-center items-center rounded-full mb-2 sm:mb-0">
+                    <Image src={item.icon} alt="icon" width={20} height={20} />
+                  </div>
+                  <div className="flex flex-col text-black">
+                    <h2 className="text-xl sm:text-2xl font-semibold flex items-center justify-center sm:justify-start">
+                      {number != null && !isNaN(number) ? (
+                        <>
+                          <CountUp
+                            end={inView ? number : 0}
+                            duration={1.5}
+                            separator=","
+                          />
+                          {suffix}
+                        </>
+                      ) : (
+                        item.title
+                      )}
+                    </h2>
+                    <p className="text-xs sm:text-sm">{item.subtitle}</p>
+                  </div>
                 </div>
-                <div className="flex flex-col text-black">
-                  <h2 className="text-xl sm:text-2xl font-semibold">
-                    {item.title}
-                  </h2>
-                  <p className="text-xs sm:text-sm">{item.subtitle}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -144,4 +180,4 @@ const ChildrenLearn = ({ bgColor, stats }: {
   );
 };
 
-export default ChildrenLearn;
+export { Stats };

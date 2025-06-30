@@ -64,10 +64,17 @@ export interface FeaturesProps {
 
 // Define the props for InternalPage
 export interface InternalPageProps {
-  Boy: StaticImageData;
-  HeroBG: StaticImageData;
+  heroImage: StaticImageData;
+  bgImage: StaticImageData;
   bgColor: string;
   stats: StatItem[];
   featureData: FeatureItem[];
-  TestiTitle: string;
+  title: string;
+  testimonials: Array<{
+    name: string;
+    title: string;
+    text: string;
+  }>;
+  heroTitle: string;
+  heroSubtitle: string;
 }

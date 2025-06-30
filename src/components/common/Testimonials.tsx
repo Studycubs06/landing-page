@@ -3,40 +3,16 @@ import React from "react";
 import TestiBG from "../../assets/images/testiBG.webp";
 
 interface TestimonialsProps {
-  TestiTitle: string;
+  title: string;
+  testimonials: Array<{
+    name: string;
+    title: string;
+    text: string;
+  }>
 }
 
-const testimonials = [
-  {
-    name: "Kathy Sullivan",
-    title: "CEO at Ordian IT",
-    text: `Lorem ipsum dolor sit amet, elit, sed
-do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Orci
-nulla pellentesque dignissim enim.
-Amet consectetur adipiscing`,
-  },
-  {
-    name: "Elsie Stroud",
-    title: "CEO at Edwards",
-    text: `Lorem ipsum dolor sit amet, elit, sed
-do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Orci
-nulla pellentesque dignissim enim.
-Amet consectetur adipiscing`,
-  },
-  {
-    name: "Lucas White",
-    title: "Manager at BrightFuture",
-    text: `Lorem ipsum dolor sit amet, elit, sed
-do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Orci
-nulla pellentesque dignissim enim.
-Amet consectetur adipiscing`,
-  },
-];
 
-const Testimonials: React.FC<TestimonialsProps> = ({ TestiTitle }) => {
+const Testimonials: React.FC<TestimonialsProps> = ({ title, testimonials }) => {
   return (
     <section className="relative w-full py-20 h-auto md:h-[580px] xlg:h-[650px] text-black overflow-hidden">
       {/* Background Image */}
@@ -50,7 +26,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ TestiTitle }) => {
 
       {/* Section Heading */}
       <div className="relative z-10 container mx-auto px-6 md:px-10 flex flex-col items-center text-center mb-10">
-        <h1 className="text-3xl font-bold text-[#17254E]">{TestiTitle} </h1>
+        <h1 className="text-3xl font-bold text-[#17254E]">{title} </h1>
       </div>
 
       {/* Testimonials */}
