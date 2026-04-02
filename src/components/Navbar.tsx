@@ -7,9 +7,10 @@ import BookFreeTrialButton from "./BookFreeTrialButton";
 import { trackNavigation } from "@/utils/trackCustomEvent";
 import { FaClock, FaMapMarkerAlt } from "react-icons/fa";
 
+const locations = ["Pune Center", "Bidar Center", "Bhalki Center"];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const locations = ["Pune Center", "Bidar Center", "Bhalki Center"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function Navbar() {
       setCurrentIndex((prev) => (prev + 1) % locations.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, [locations.length]);
+  }, []);
   return (
     <>
       <div className="bg-[#0097B2] text-white py-2 px-6 flex justify-center items-center text-sm">
