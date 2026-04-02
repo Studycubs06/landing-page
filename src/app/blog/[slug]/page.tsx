@@ -71,7 +71,7 @@ const components = {
   block: {
     blockquote: ({children}: any) => (
       <blockquote className="border-l-8 border-[#FFBC36] bg-orange-50 p-8 my-10 rounded-r-3xl italic text-2xl font-serif text-[#17254E]">
-        "{children}"
+        &quot;{children}&quot;
       </blockquote>
     ),
     h2: ({children}: any) => (

@@ -85,7 +85,7 @@ const AboutUs = () => {
             </span>
           </h2>
           <p className="mt-4 text-sm md:text-md font-inter max-w-full md:w-[500px]">
-            We are India's leading platform dedicated to mastering public speaking and communication. Our mission is to equip the next generation with the confidence to lead, persuade, and inspire. Through our unique 1:3 mentor-student ratio, we ensure every child finds their voice.
+            We are India&apos;s leading platform dedicated to mastering public speaking and communication. Our mission is to equip the next generation with the confidence to lead, persuade, and inspire. Through our unique 1:3 mentor-student ratio, we ensure every child finds their voice.
           </p>
 
           {/* Features */}

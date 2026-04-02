@@ -17,9 +17,6 @@ import Boy from "../assets/images/boy.webp";
 import AcademicsImg from "../assets/images/academics.webp";
 import Bird from "../assets/images/birds.webp";
 
-import { client } from "@/sanity/lib/client";
-import { COURSES_QUERY } from "@/sanity/lib/queries";
-
 const DEFAULT_COURSES = [
   {
     title: "Public Speaking Foundation (Level 1)",
@@ -69,7 +66,7 @@ const TopCourses = ({ initialCourses }: TopCoursesProps) => {
         }))
       : DEFAULT_COURSES
   );
-  const [loading, setLoading] = React.useState(!initialCourses);
+  // const [loading, setLoading] = React.useState(!initialCourses);
 
   React.useEffect(() => {
     if (initialCourses && initialCourses.length > 0) {
@@ -83,7 +80,7 @@ const TopCourses = ({ initialCourses }: TopCoursesProps) => {
         path: `/public-speaking-level-${c.level}`,
       }));
       setCourses(mapped);
-      setLoading(false);
+      // setLoading(false);
     }
   }, [initialCourses]);
 

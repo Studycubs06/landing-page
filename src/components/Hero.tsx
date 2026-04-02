@@ -24,7 +24,7 @@ const Hero = () => {
         {/* Text Content */}
         <div className="md:w-1/2 text-center relative top-[50px] md:top-0 md:text-left">
           <h1 className="font-Batangas md:w-[450px] text-2xl text-[#17254E] md:text-5xl font-bold leading-[1.3]">
-            India's Best Public Speaking Platform
+            India&apos;s Best Public Speaking Platform
           </h1>
           <p className="mt-4 text-md md:text-md font-inter">
             Empowering students with essential communication skills. Master the art of oratory with our specialized 1:3 mentor-student ratio and personalized coaching at StudyCubs!

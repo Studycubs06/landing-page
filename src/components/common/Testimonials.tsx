@@ -2,8 +2,6 @@ import Image from "next/image";
 import React from "react";
 import TestiBG from "../../assets/images/testiBG.webp";
 
-import { client } from "@/sanity/lib/client";
-import { TESTIMONIALS_QUERY } from "@/sanity/lib/queries";
 
 interface TestimonialsProps {
   title: string;
@@ -34,7 +32,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ title, testimonials }) => {
 
       {/* Testimonials */}
       <div className="relative z-10 container mx-auto px-6 md:px-28 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {testimonials.map((testimonial, index) => (
+        {testimonials?.map((testimonial, index) => (
           <div
             key={index}
             className="border border-[#000] p-6 rounded-md  flex flex-col justify-between h-full"

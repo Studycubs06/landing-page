@@ -73,6 +73,14 @@ export const trackNavigation = {
       content_category: "company_info",
     });
   },
+
+  blog: () => {
+    trackCustomEvent("ViewContent", {
+      content_type: "navigation",
+      content_name: "Blog Page",
+      content_category: "content_platform",
+    });
+  },
 };
 
 // Action Button Tracking Events

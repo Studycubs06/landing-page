@@ -105,7 +105,7 @@ export default async function DebugSanityPage() {
             </div>
             <div className="pt-4 border-t border-gray-700">
               <p className="text-red-400 text-sm">
-                💡 Tip: If these don't match your Sanity dashboard, your .env.local is wrong!
+                💡 Tip: If these don&apos;t match your Sanity dashboard, your .env.local is wrong!
               </p>
             </div>
           </div>

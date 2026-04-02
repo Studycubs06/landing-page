@@ -2,8 +2,6 @@ import InternalPage from "@/components/InternalPage";
 import React from "react";
 import Oratory from "../../assets/images/boyMic.webp";
 import HeroBG from "../../assets/images/HeroBG2.webp";
-import Teaching from "../../assets/images/teaching.webp";
-import Writing from "../../assets/images/writing.webp";
 import Mobile from "../../assets/images/mobile.webp";
 import Performance from "../../assets/images/academics.webp";
 

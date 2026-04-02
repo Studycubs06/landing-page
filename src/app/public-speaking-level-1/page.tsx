@@ -4,8 +4,6 @@ import Boy from "../../assets/images/micBoy.webp";
 import HeroBG from "../../assets/images/HeroBG2.webp";
 import Teaching from "../../assets/images/teaching.webp";
 import Writing from "../../assets/images/writing.webp";
-import Mobile from "../../assets/images/mobile.webp";
-
 import { PUBLIC_SPEAKING_TESTIMONIALS } from "@/constants/testimonials";
 import { PUBLIC_SPEAKING_STATS } from "@/constants/statsData";
 

@@ -7,7 +7,7 @@ const PricingPackage = () => {
       <div className="container mx-auto px-6 md:px-12 text-center">
         <h2 className="text-[#FFBC36] font-semibold mb-2">PRICING</h2>
         <h3 className="text-3xl md:text-5xl font-bold text-[#17254E] mb-6">
-          India's Most Affordable Signature Package
+          India&apos;s Most Affordable Signature Package
         </h3>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
           Experience premium coaching with our specialized 1:3 mentor-student ratio, designed for maximum interaction and personality development.

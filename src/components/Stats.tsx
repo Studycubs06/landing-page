@@ -6,8 +6,6 @@ import { useInView } from "react-intersection-observer";
 
 import Star from "../assets/images/star.webp";
 import { HOME_STATS as FALLBACK_STATS } from "@/constants/statsData";
-import { client } from "@/sanity/lib/client";
-import { STATS_QUERY } from "@/sanity/lib/queries";
 
 // Icon mapping
 import Stud from "../assets/images/stud.webp";

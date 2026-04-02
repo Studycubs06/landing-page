@@ -30,7 +30,7 @@ const WhytoChose = () => {
           </h2>
 
           <p className="max-w-full md:w-[500px] mt-4 text-sm md:text-md font-inter text-gray-700">
-            We don't just teach speeches; we build personalities. Our curriculum is designed to transform nervous listeners into confident speakers.
+            We don&apos;t just teach speeches; we build personalities. Our curriculum is designed to transform nervous listeners into confident speakers.
           </p>
 
           {/* Features */}

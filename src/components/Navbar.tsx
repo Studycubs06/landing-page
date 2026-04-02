@@ -17,7 +17,7 @@ export default function Navbar() {
       setCurrentIndex((prev) => (prev + 1) % locations.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [locations.length]);
   return (
     <>
       <div className="bg-[#0097B2] text-white py-2 px-6 flex justify-center items-center text-sm">
