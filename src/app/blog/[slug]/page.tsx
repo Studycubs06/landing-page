@@ -10,7 +10,8 @@ import { notFound } from "next/navigation";
 export const dynamic = "force-dynamic";
 
 interface PostPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 // SEO Metadata Generation

@@ -6,6 +6,7 @@ import { LEGAL_BY_SLUG_QUERY } from "@/sanity/lib/queries";
 
 interface PolicyPageProps {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 export async function generateMetadata({ params }: PolicyPageProps): Promise<Metadata> {
