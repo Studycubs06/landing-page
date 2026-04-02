@@ -159,7 +159,7 @@ async function seed() {
         ...doc,
       });
       console.log(`✅ Success: ${doc.title} is now live.`);
-    } catch (err) {
+    } catch (err: any) {
       console.error(`❌ Error seeding ${doc.title}:`, err.message);
     }
   }
