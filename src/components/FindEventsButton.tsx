@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import PopupForm from "./PopupForm";
 import { trackCustomEvent } from "@/utils/trackCustomEvent";
 
-function FindEventsButton({ className }: { className?: string }) {
+function FindEventsButton({ className, id }: { className?: string; id?: string }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <div>
       <button
+        id={id}
         onClick={() => {
           setIsPopupOpen(true);
           trackCustomEvent("book_free_trial_button_clicked", {

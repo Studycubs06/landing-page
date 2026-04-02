@@ -3,9 +3,9 @@ import React from "react";
 import { trackCustomEvent } from "@/utils/trackCustomEvent";
 import Link from "next/link";
 
-function BookFreeTrialButton({ className }: { className?: string }) {
+function BookFreeTrialButton({ className, id }: { className?: string; id?: string }) {
   return (
-    <Link href="/book-free-trial" onClick={() => {
+    <Link id={id} href="/book-free-trial" onClick={() => {
       trackCustomEvent("book_free_trial_button_clicked", {
         content_type: "button",
         content_name: "Book Free Trial Button",

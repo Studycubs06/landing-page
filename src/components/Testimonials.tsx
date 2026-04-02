@@ -9,7 +9,21 @@ import { Autoplay, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const Testimonials = () => {
+interface TestimonialsProps {
+  initialTestimonials?: any[];
+}
+
+const Testimonials = ({ initialTestimonials }: TestimonialsProps) => {
+  const testimonials =
+    initialTestimonials && initialTestimonials.length > 0
+      ? initialTestimonials.map((t) => ({
+          name: t.name,
+          title: t.role,
+          text: t.quote,
+          avatar: t.avatarUrl,
+        }))
+      : HOME_TESTIMONIALS;
+
   return (
     <section className="relative w-full py-20 h-auto md:h-[580px] xlg:h-[650px] text-black overflow-hidden">
       <Image
@@ -50,7 +64,7 @@ const Testimonials = () => {
           }}
           className="!pb-10"
         >
-          {HOME_TESTIMONIALS.map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div className="flex flex-col justify-between h-full min-h-[250px] border border-dotted border-[#FFBC36] p-6 rounded-md bg-white bg-opacity-90 shadow-md">
                 {/* Stars */}

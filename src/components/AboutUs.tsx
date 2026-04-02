@@ -79,17 +79,13 @@ const AboutUs = () => {
             <h2 className="text-[#FFBC36] font-semibold">ABOUT US</h2>
           </div>
           <h2 className="max-w-full md:w-[500px] text-lg text-[#17254E] md:text-5xl font-bold leading-snug md:leading-[1.3] mt-2">
-            we are building future cubs at
+            building confident speakers at
             <span className="text-3xl md:text-4xl ml-2 text-[#0097B2] font-bold cursor-pointer">
               Study<span className="text-[#FFBC36] font-bold">cubs</span>
             </span>
           </h2>
           <p className="mt-4 text-sm md:text-md font-inter max-w-full md:w-[500px]">
-            Our vision is to create a skilled and empowered society that drives
-            meaningful impact across the world. We aim to equip individuals with
-            fast-evolving, future-ready skills that not only keep pace with
-            changing times but also inspire innovation, growth, and lasting
-            success.
+            We are India's leading platform dedicated to mastering public speaking and communication. Our mission is to equip the next generation with the confidence to lead, persuade, and inspire. Through our unique 1:3 mentor-student ratio, we ensure every child finds their voice.
           </p>
 
           {/* Features */}
@@ -97,13 +93,13 @@ const AboutUs = () => {
             <div className="flex items-center gap-3 bg-[#F3F5F5] px-4 py-3 rounded-md w-full">
               <FaCheckCircle color="#0097B2" size={20} />
               <h3 className="text-sm font-semibold text-[#17254E]">
-                QUALITY EDUCATORS
+                EXPERT ORATORS
               </h3>
             </div>
             <div className="flex items-center gap-3 bg-[#F3F5F5] px-4 py-3 rounded-md w-full">
               <FaCheckCircle color="#0097B2" size={20} />
               <h3 className="text-sm font-semibold text-[#17254E]">
-                PLAY TO LEARN
+                CONFIDENCE BUILDING
               </h3>
             </div>
           </div>
@@ -111,13 +107,13 @@ const AboutUs = () => {
             <div className="flex items-center gap-3 bg-[#F3F5F5] px-4 py-3 rounded-md w-full">
               <FaCheckCircle color="#0097B2" size={20} />
               <h3 className="text-sm font-semibold text-[#17254E]">
-                PERSONALIZED
+                1:3 MENTOR RATIO
               </h3>
             </div>
             <div className="flex items-center gap-3 bg-[#F3F5F5] px-4 py-3 rounded-md w-full">
               <FaCheckCircle color="#0097B2" size={20} />
               <h3 className="text-sm font-semibold text-[#17254E]">
-                STUDY ENVIRONMENT
+                LIVE PERFORMANCE
               </h3>
             </div>
           </div>

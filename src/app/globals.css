@@ -73,4 +73,52 @@ body {
       left: 100%;
     }
   }
-}
+  /* Premium Blog Typography Styling */
+  .blog-content {
+    font-family: 'Inter', sans-serif;
+    color: #2D3748;
+    line-height: 1.85;
+    letter-spacing: -0.011em;
+  }
+  .blog-content p {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+  }
+  .blog-content strong {
+    color: #17254E;
+    font-weight: 800;
+  }
+  .blog-content h2 {
+    color: #17254E;
+    font-weight: 800;
+    font-size: 2.25rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 100px;
+  }
+  .blog-content h3 {
+    color: #17254E;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .blog-content blockquote {
+    border-left: 8px solid #FFBC36;
+    padding: 2rem 2.5rem;
+    background: #FFF8F0;
+    font-style: italic;
+    font-size: 1.5rem;
+    border-radius: 0 1.5rem 1.5rem 0;
+    margin: 3rem 0;
+    color: #17254E;
+    font-weight: 500;
+  }
+  .blog-content figure {
+    margin: 3.5rem 0;
+  }
+  .blog-content figure img {
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+}

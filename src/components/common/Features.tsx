@@ -9,7 +9,7 @@ const Features: React.FC<FeaturesProps> = ({ featureData }) => {
     <section className="relative bg-[#fff] w-full py-20 text-black overflow-hidden">
       <div className="relative z-10 container mx-auto px-6 md:px-10 flex flex-col items-center text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-semibold max-w-xl leading-tight">
-          Check Out Educate Features Win Any Exam
+          Master Public Speaking with Our Elite Features
         </h2>
       </div>
 
@@ -61,11 +61,11 @@ const Features: React.FC<FeaturesProps> = ({ featureData }) => {
             <p className="md:w-[500px] w-[300px] text-base text-gray-700">
               You&apos;re not just paying for classes you&apos;re investing in your
               child’s confidence, communication skills, and future success with
-              expert mentors and a proven curriculum at Studycubs.
+              expert mentors and a 1:3 ratio at Studycubs.
             </p>
             <div className="md:w-[500px] w-[200px] flex flex-row flex-wrap gap-3">
-              <button className="bg-[#704FE6] hover:bg-[#1558b0] text-white px-6 py-3 rounded-full text-sm transition">
-                Just @ 1499/-
+              <button className="bg-[#FFBC36] hover:bg-[#e5a930] text-[#17254E] font-bold px-6 py-3 rounded-full text-sm transition">
+                Just @ 3000/-
               </button>
               <button
                 className={`w-[100px] flex items-center bg-[#17254E] justify-between rounded-full text-white w-full max-w-xs`}

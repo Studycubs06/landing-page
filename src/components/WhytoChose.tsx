@@ -19,19 +19,18 @@ const WhytoChose = () => {
 
       <div className="relative z-20 container mx-auto px-6 md:px-28 flex flex-col-reverse md:flex-row items-center justify-between gap-10 h-full">
         {/* Content */}
-        <div className="md:w-1/2 text-center md:text-left">
+        <div className="md:w-1/2 text-center md:text-left" id="why-choose-us">
           <div className="flex justify-center md:justify-start items-center gap-3">
             <FaBook color="#FFBC36" />
             <h2 className="text-[#FFBC36] font-semibold">WHY CHOOSE US</h2>
           </div>
 
           <h2 className="max-w-full md:w-[500px] text-lg md:text-5xl font-bold text-[#17254E] leading-snug md:leading-[1.3] mt-2">
-            New Approach To Learning
+            Modern Approach To Public Speaking
           </h2>
 
           <p className="max-w-full md:w-[500px] mt-4 text-sm md:text-md font-inter text-gray-700">
-            We believe every child has hidden talent we nurture and shape it for
-            a brighter future with our expert mentors.
+            We don't just teach speeches; we build personalities. Our curriculum is designed to transform nervous listeners into confident speakers.
           </p>
 
           {/* Features */}
@@ -39,13 +38,13 @@ const WhytoChose = () => {
             <div className="flex items-center gap-3 w-full">
               <FaCheck color="#FFBC36" size={20} />
               <h3 className="text-sm font-semibold text-[#17254E]">
-                Personalized
+                Active Listening
               </h3>
             </div>
             <div className="flex items-center gap-3 w-full">
               <FaCheck color="#FFBC36" size={20} />
               <h3 className="text-sm font-semibold text-[#17254E]">
-                Best curriculum
+                Body Language
               </h3>
             </div>
           </div>
@@ -54,20 +53,23 @@ const WhytoChose = () => {
             <div className="flex items-center gap-3 w-full">
               <FaCheck color="#FE543D" size={20} />
               <h3 className="text-sm font-semibold text-[#17254E]">
-                Expert Tutor
+                Vocational Training
               </h3>
             </div>
             <div className="flex items-center gap-3 w-full">
               <FaCheck color="#FE543D" size={20} />
               <h3 className="text-sm font-semibold text-[#17254E]">
-                Affordable
+                Stage Presence
               </h3>
             </div>
           </div>
 
           {/* CTA Button */}
           <div className="mt-5 hidden md:flex sm:hidden">
-            <FindEventsButton className="flash-button bg-[#2AB7CA] px-6 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#2AB7CA]" />
+            <FindEventsButton 
+              id="why-choose-us-cta"
+              className="flash-button bg-[#2AB7CA] px-6 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#2AB7CA]" 
+            />
           </div>
         </div>
 

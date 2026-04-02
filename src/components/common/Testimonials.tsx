@@ -2,9 +2,12 @@ import Image from "next/image";
 import React from "react";
 import TestiBG from "../../assets/images/testiBG.webp";
 
+import { client } from "@/sanity/lib/client";
+import { TESTIMONIALS_QUERY } from "@/sanity/lib/queries";
+
 interface TestimonialsProps {
   title: string;
-  testimonials: Array<{
+  testimonials?: Array<{
     name: string;
     title: string;
     text: string;

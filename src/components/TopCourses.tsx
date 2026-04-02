@@ -1,69 +1,94 @@
 "use client";
-
 import React from "react";
-import {
-  FaBook,
-  FaStar,
-  FaClock,
-  FaUser,
-  FaRupeeSign,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
 import Image from "next/image";
-import BoyMic from "../assets/images/boyMic.webp";
-import Girl from "../assets/images/girlMoney.webp";
-import Boy from "../assets/images/VrBoy.webp";
-import { HiDocumentText } from "react-icons/hi";
-import Bird from "../assets/images/birds.webp";
 import { useRouter } from "next/navigation";
-import AcademicsImg from "../assets/images/academics.webp";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, A11y } from "swiper/modules";
+import { FaBook, FaStar, FaClock, FaUser, FaMapMarkerAlt, FaRupeeSign } from "react-icons/fa";
+import { HiDocumentText } from "react-icons/hi";
+
+// Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
-const courseData = [
+// Assets
+import BoyMic from "../assets/images/boyMic.webp";
+import Boy from "../assets/images/boy.webp";
+import AcademicsImg from "../assets/images/academics.webp";
+import Bird from "../assets/images/birds.webp";
+
+import { client } from "@/sanity/lib/client";
+import { COURSES_QUERY } from "@/sanity/lib/queries";
+
+const DEFAULT_COURSES = [
   {
-    title: "Academics",
-    rating: 4.8,
-    features: ["10 Grades", "Ongoing", "students 1k+"],
-    price: "Varies",
-    image: AcademicsImg,
-    grade: "1st - 10th Grade",
-    path: "/academics",
-  },
-  {
-    title: "Public Speaking And Spoken English",
-    rating: 4.7,
-    features: ["3 Levels", "6 months", "students 1k"],
-    price: "1499",
+    title: "Public Speaking Foundation (Level 1)",
+    rating: 4.9,
+    features: ["1:3 Ratio", "12 Classes", "1.15 Hr/Class"],
+    price: "3000",
     image: BoyMic,
-    grade: "3rd - 12th Grade",
-    path: "/public-speaking",
+    grade: "Grade 3 - Grade 6",
+    path: "/public-speaking-level-1",
   },
   {
-    title: "Financial Planning with stock market",
-    rating: 4.7,
-    features: ["3 Levels", "3 months", "students 100+"],
-    price: "1999",
-    image: Girl,
-    grade: "7th - Under Graduate",
-    path: "/financial-planning",
-  },
-  {
-    title: "Artificial intelligent with python and mern stack ",
-    rating: 4.7,
-    features: ["4 Levels", "6 months", "students 100+"],
-    price: "1999",
+    title: "Oratory Mastery (Level 2)",
+    rating: 4.8,
+    features: ["1:3 Ratio", "12 Classes", "1.15 Hr/Class"],
+    price: "3000",
     image: Boy,
-    grade: "7th - Under Graduate",
-    path: "/artificial-intelligence",
+    grade: "Grade 7 - Grade 10",
+    path: "/public-speaking-level-2",
+  },
+  {
+    title: "Elite Communication (Level 3)",
+    rating: 4.9,
+    features: ["1:3 Ratio", "12 Classes", "1.15 Hr/Class"],
+    price: "3000",
+    image: AcademicsImg,
+    grade: "Grade 11 - Under Graduate",
+    path: "/public-speaking-level-3",
   },
 ];
 
-const TopCourses = () => {
+interface TopCoursesProps {
+  initialCourses?: any[];
+}
+
+const TopCourses = ({ initialCourses }: TopCoursesProps) => {
   const router = useRouter();
+  const [courses, setCourses] = React.useState<any[]>(
+    initialCourses && initialCourses.length > 0
+      ? initialCourses.map((c: any) => ({
+          title: c.title,
+          rating: 4.9,
+          features: [c.mentorRatio, `${c.classesPerMonth} Classes`, `${c.duration}/Class`],
+          price: c.price,
+          image: c.imageUrl || BoyMic,
+          grade: c.grades,
+          path: `/public-speaking-level-${c.level}`,
+        }))
+      : DEFAULT_COURSES
+  );
+  const [loading, setLoading] = React.useState(!initialCourses);
+
+  React.useEffect(() => {
+    if (initialCourses && initialCourses.length > 0) {
+      const mapped = initialCourses.map((c: any) => ({
+        title: c.title,
+        rating: 4.9,
+        features: [c.mentorRatio, `${c.classesPerMonth} Classes`, `${c.duration}/Class`],
+        price: c.price,
+        image: c.imageUrl || BoyMic,
+        grade: c.grades,
+        path: `/public-speaking-level-${c.level}`,
+      }));
+      setCourses(mapped);
+      setLoading(false);
+    }
+  }, [initialCourses]);
+
+  const displayCourses = courses.length > 0 ? courses : DEFAULT_COURSES;
+
   return (
     <section
       className="relative bg-[#FFF8F0] w-full py-20 text-black overflow-hidden"
@@ -104,7 +129,7 @@ const TopCourses = () => {
           }}
           className="!pb-10"
         >
-          {courseData.map((course, index) => (
+          {displayCourses.map((course, index) => (
             <SwiperSlide key={index}>
               <div className="bg-white rounded-md p-4 shadow-md flex flex-col justify-between min-h-[430px] h-full">
                 {/* Image with tag */}
@@ -140,15 +165,15 @@ const TopCourses = () => {
                 <div className="flex justify-between text-xs text-[#17254E] mb-4">
                   <div className="flex items-center gap-1">
                     <HiDocumentText />
-                    {course.features[0]}
+                    {course.features?.[0]}
                   </div>
                   <div className="flex items-center gap-1">
                     <FaClock />
-                    {course.features[1]}
+                    {course.features?.[1]}
                   </div>
                   <div className="flex items-center gap-1">
                     <FaUser />
-                    {course.features[2]}
+                    {course.features?.[2]}
                   </div>
                 </div>
 

@@ -23,16 +23,17 @@ const Hero = () => {
       <div className="relative z-20 container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center justify-center min-h-[600px] h-full">
         {/* Text Content */}
         <div className="md:w-1/2 text-center relative top-[50px] md:top-0 md:text-left">
-          <h2 className="font-Batangas md:w-[450px] text-2xl text-[#17254E] md:text-5xl font-bold leading-[1.3]">
-            The Best Place To Learn, Play and Grow
-          </h2>
+          <h1 className="font-Batangas md:w-[450px] text-2xl text-[#17254E] md:text-5xl font-bold leading-[1.3]">
+            India's Best Public Speaking Platform
+          </h1>
           <p className="mt-4 text-md md:text-md font-inter">
-            Empowering students with essential skills in public speaking,
-            coding, and more. Unlock your potential with personalized learning
-            at StudyCubs!
+            Empowering students with essential communication skills. Master the art of oratory with our specialized 1:3 mentor-student ratio and personalized coaching at StudyCubs!
           </p>
           <div className="mt-5 hidden md:flex sm:hidden">
-            <BookFreeTrialButton className="flash-button bg-[#FFBC36] px-10 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#ffd930]" />
+            <BookFreeTrialButton 
+              id="hero-cta"
+              className="flash-button bg-[#FFBC36] px-10 py-3 rounded-full text-white text-sm hover:shadow-[0px_0px_11px_1px_#ffd930]" 
+            />
           </div>
         </div>
 

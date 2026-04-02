@@ -8,23 +8,23 @@ import Course from "../assets/images/courses.webp";
 export const HOME_STATS = [
     {
         icon: Stud,
-        count: "625+",
-        label: "Total Students",
+        count: "1500+",
+        label: "Graduated Speakers",
     },
     {
         icon: Hand,
-        count: "6350+",
-        label: "Classes Conducted",
+        count: "10000+",
+        label: "Practice Minutes",
     },
     {
         icon: Group,
-        count: "10+",
-        label: "Expert Tutors",
+        count: "50+",
+        label: "Expert Mentors",
     },
     {
         icon: Course,
-        count: "4",
-        label: "Courses Offered",
+        count: "3",
+        label: "Learning Levels",
     },
 ];
 

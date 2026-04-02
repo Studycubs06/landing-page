@@ -1,5 +1,13 @@
 node_modules/
-
 .next/
+out/
+build/
+dist/
 
+# Environment Variables
+.env*
+!.env.example
+
+# OS stuff
 .DS_Store
+Thumbs.db

@@ -5,22 +5,23 @@ import Head from "next/head";
 import Script from "next/script";
 import Image from "next/image";
 
+
 export const metadata = {
-  title: "Studycubs | Learn Smarter",
+  title: "India's Best Public Speaking Platform | StudyCubs",
   description:
-    "Studycubs offers personalized online learning for grades 3-10 in subjects like public speaking, English, and creative writing.",
+    "Master the art of public speaking with India's best platform. Featuring a 1:3 mentor-student ratio, 12 classes a month, and personalized coaching to build confidence in future leaders.",
   keywords:
-    "online learning, personalized classes, public speaking, English grammar, creative writing, study platform, kids education, grade 3 to 10, personal growth, confidence building",
+    "public speaking India, communication skills for kids, 1:3 mentor ratio, public speaking platform, confidence building, StudyCubs, effective communication, youth oratory",
   og: {
-    title: "Studycubs - Learning Made Simple!",
+    title: "StudyCubs | India's #1 Public Speaking Platform",
     description:
-      "Studycubs offers personalized online classes for students in grades 3 to 10, covering essential academic and life skills. Join our community today!",
+      "Join India's best public speaking platform. 1:3 mentor-student ratio, 1.15-hour live sessions, and a personalized curriculum for kids.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Studycubs - Learning Made Simple!",
+    title: "StudyCubs | India's #1 Public Speaking Platform",
     description:
-      "Studycubs offers personalized online classes for students in grades 3 to 10, covering essential academic and life skills. Join our community today!",
+      "Transform your child's communication skills with India's best public speaking platform. 1:3 mentor ratio and personalized classes.",
   },
   social: {
     instagram: "https://www.instagram.com/Studycubs/",
@@ -215,6 +216,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <body className="bg-white text-gray-900">
         <Navbar />
+
         <main>{children}</main>
 
         <Footer />
@@ -236,7 +238,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             `,
           }}
         />
+        <Script
+          id="microsoft-clarity"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "${process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID || 'w3cnys11bp'}");
+            `,
+          }}
+        />
       </body>
     </html>
   );
 }
+

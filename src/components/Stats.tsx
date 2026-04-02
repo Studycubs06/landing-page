@@ -5,18 +5,56 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 import Star from "../assets/images/star.webp";
-import { HOME_STATS } from "@/constants/statsData";
+import { HOME_STATS as FALLBACK_STATS } from "@/constants/statsData";
+import { client } from "@/sanity/lib/client";
+import { STATS_QUERY } from "@/sanity/lib/queries";
 
-const Stats = () => {
+// Icon mapping
+import Stud from "../assets/images/stud.webp";
+import Hand from "../assets/images/hand.webp";
+import Group from "../assets/images/group.webp";
+import Course from "../assets/images/courses.webp";
+
+const ICON_MAP: Record<string, any> = {
+  Stud,
+  Hand,
+  Group,
+  Course,
+};
+
+interface StatsProps {
+  initialStats?: any[];
+}
+
+const Stats = ({ initialStats }: StatsProps) => {
+  const [stats, setStats] = React.useState<any[]>(
+    initialStats && initialStats.length > 0
+      ? initialStats.map((s) => ({
+          ...s,
+          icon: ICON_MAP[s.icon] || Stud,
+        }))
+      : FALLBACK_STATS
+  );
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3, // adjust how much visible before triggering
   });
 
+  React.useEffect(() => {
+    if (initialStats && initialStats.length > 0) {
+      const mapped = initialStats.map((s: any) => ({
+        label: s.label,
+        count: s.count,
+        icon: ICON_MAP[s.icon] || Stud,
+      }));
+      setStats(mapped);
+    }
+  }, [initialStats]);
+
   return (
     <div ref={ref} className="relative container mx-auto px-6 py-20 bg-white">
       <div className="grid grid-cols-2 sm:grid-cols-4 md:divide-x md:divide-dotted md:divide-black text-center">
-        {HOME_STATS.map((stat, index) => {
+        {stats.map((stat, index) => {
           const number = parseInt(stat.count);
           const suffix = stat.count.includes("+") ? "+" : "";
 
