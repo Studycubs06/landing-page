@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+// Fresh build marker: 2026-04-03-BUILD-01
+
 
 const nextConfig: NextConfig = {
   images: {
