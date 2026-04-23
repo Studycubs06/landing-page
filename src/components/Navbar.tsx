@@ -97,8 +97,8 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <a href="tel:+919876543210" className="mt-3 inline-flex items-center gap-2 font-display font-bold text-primary text-sm">
-            <Phone size={16} /> 9876 54 32 10
+          <a href="tel:+918147434014" className="mt-3 inline-flex items-center gap-2 font-display font-bold text-primary text-sm">
+            <Phone size={16} /> 8147434014
           </a>
         </div>
       )}
