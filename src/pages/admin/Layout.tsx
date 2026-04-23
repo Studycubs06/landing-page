@@ -5,7 +5,15 @@ import { toast } from "sonner";
 const AdminLayout = () => {
   const navigate = useNavigate();
   const userStr = localStorage.getItem("adminUser");
-  const user = userStr && userStr !== "undefined" ? JSON.parse(userStr) : {};
+  let user = { role: 'admin', full_name: 'Admin' };
+  
+  try {
+    if (userStr && userStr !== "undefined") {
+      user = JSON.parse(userStr);
+    }
+  } catch (e) {
+    console.error("Layout User Parse Error", e);
+  }
 
   const handleLogout = () => {
     localStorage.removeItem("adminToken");

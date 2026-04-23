@@ -5,11 +5,19 @@ import { MessageSquare, BookOpen, Search, TrendingUp } from "lucide-react";
 
 const DashboardOverview = () => {
   const [stats, setStats] = useState({ enquiries: 0, programs: 0, blogs: 0 });
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<any>({ role: 'admin' });
+  const [loadingStats, setLoadingStats] = useState(true);
 
   useEffect(() => {
-    const userStr = localStorage.getItem("adminUser");
-    const loggedInUser = userStr && userStr !== "undefined" ? JSON.parse(userStr) : {};
+    let loggedInUser = { role: 'admin', id: null };
+    try {
+      const userStr = localStorage.getItem("adminUser");
+      if (userStr && userStr !== "undefined") {
+        loggedInUser = JSON.parse(userStr);
+      }
+    } catch (e) {
+      console.error("Dashboard User Parse Error", e);
+    }
     setUser(loggedInUser);
 
     const fetchStats = async () => {
