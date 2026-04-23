@@ -24,8 +24,8 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-bold text-sm mb-3">Contact</h4>
           <ul className="space-y-1.5 font-body text-sm text-primary-foreground/50">
-            <li>📧 hello@studycubs.com</li>
-            <li>📞 +91 98765 43210</li>
+            <li>📧 support@studycubs.com</li>
+            <li>📞 +91 8147434014</li>
             <li>📍 Pan India (Online)</li>
           </ul>
         </div>
