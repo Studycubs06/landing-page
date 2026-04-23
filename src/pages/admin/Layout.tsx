@@ -4,7 +4,8 @@ import { toast } from "sonner";
 
 const AdminLayout = () => {
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem("adminUser") || "{}");
+  const userStr = localStorage.getItem("adminUser");
+  const user = userStr && userStr !== "undefined" ? JSON.parse(userStr) : {};
 
   const handleLogout = () => {
     localStorage.removeItem("adminToken");

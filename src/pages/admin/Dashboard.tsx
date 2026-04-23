@@ -8,7 +8,8 @@ const DashboardOverview = () => {
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    const loggedInUser = JSON.parse(localStorage.getItem("adminUser") || "{}");
+    const userStr = localStorage.getItem("adminUser");
+    const loggedInUser = userStr && userStr !== "undefined" ? JSON.parse(userStr) : {};
     setUser(loggedInUser);
 
     const fetchStats = async () => {
