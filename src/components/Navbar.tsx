@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Programs", href: "/#programs", hash: "#programs" },
   { label: "About Us", href: "/#about", hash: "#about" },
   { label: "Blogs", href: "/blogs" },
-  { label: "Resources", href: "/resources" },
   { label: "FAQ", href: "/#faq", hash: "#faq" },
 ];
 
@@ -67,9 +66,9 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <a href="tel:+918147434014" className="hidden md:inline-flex items-center gap-2 font-display font-bold text-primary text-sm hover:underline">
+        <a href="tel:+919876543210" className="hidden md:inline-flex items-center gap-2 font-display font-bold text-primary text-sm hover:underline">
           <Phone size={16} />
-          8147434014
+          9876 54 32 10
         </a>
 
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)} aria-label="Toggle menu">
@@ -98,8 +97,8 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <a href="tel:+918147434014" className="mt-3 inline-flex items-center gap-2 font-display font-bold text-primary text-sm">
-            <Phone size={16} /> 8147434014
+          <a href="tel:+919876543210" className="mt-3 inline-flex items-center gap-2 font-display font-bold text-primary text-sm">
+            <Phone size={16} /> 9876 54 32 10
           </a>
         </div>
       )}
