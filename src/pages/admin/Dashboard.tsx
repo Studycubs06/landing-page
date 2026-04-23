@@ -14,9 +14,12 @@ const DashboardOverview = () => {
 
     const fetchStats = async () => {
       try {
-        const blogUrl = loggedInUser.role === 'admin' 
+        const userRole = loggedInUser?.role || 'admin';
+        const userId = loggedInUser?.id;
+        
+        const blogUrl = userRole === 'admin' 
           ? `${API_URL}/api/blogs` 
-          : `${API_URL}/api/blogs?author_id=${loggedInUser.id}`;
+          : `${API_URL}/api/blogs?author_id=${userId}`;
 
         const [enquiriesRes, blogsRes, programsRes] = await Promise.all([
           axios.get(`${API_URL}/api/enquiries`),

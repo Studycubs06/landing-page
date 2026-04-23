@@ -22,7 +22,8 @@ const AdminLayout = () => {
     { label: "Users", icon: Users, path: "/admin/users", roles: ["admin"] }, // NEW: User Manager for Super Admin
   ];
 
-  const filteredNavItems = navItems.filter(item => item.roles.includes(user.role));
+  const userRole = user?.role || 'admin';
+  const filteredNavItems = navItems.filter(item => item.roles.includes(userRole));
 
   return (
     <div className="flex min-h-screen bg-muted/20">
