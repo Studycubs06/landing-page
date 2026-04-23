@@ -16,7 +16,7 @@ const CTASection = () => (
           Book a Free Demo
         </a>
         <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/918147434014"
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-3 rounded-full border-2 border-primary-foreground font-display font-bold text-primary-foreground hover:bg-primary-foreground/10 transition-colors text-base"
