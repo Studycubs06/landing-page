@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import { API_URL } from "@/config";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -17,12 +18,12 @@ const BlogDetail = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/public/blogs/${slug}`);
+        const response = await axios.get(`${API_URL}/api/public/blogs/${slug}`);
         setBlog(response.data);
         document.title = `${response.data.seo_title || response.data.title} | StudyCubs`;
         
         // Fetch related blogs
-        const allRes = await axios.get("http://localhost:5000/api/public/blogs");
+        const allRes = await axios.get(`${API_URL}/api/public/blogs`);
         setRelatedBlogs(allRes.data.filter((b: any) => b.slug !== slug).slice(0, 3));
       } catch (error) { console.error("Error fetching blog", error); }
       finally { setLoading(false); }

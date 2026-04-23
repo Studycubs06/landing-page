@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { API_URL } from "@/config";
 import { toast } from "sonner";
 
 const DemoForm = () => {
@@ -11,7 +12,7 @@ const DemoForm = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/enquiries", formData);
+      await axios.post(`${API_URL}/api/enquiries`, formData);
       setSubmitted(true);
       toast.success("Enquiry submitted!");
     } catch (error) { toast.error("Error submitting enquiry"); }

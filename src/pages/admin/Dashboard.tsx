@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "@/config";
 import { MessageSquare, BookOpen, Search, TrendingUp } from "lucide-react";
 
 const DashboardOverview = () => {
@@ -13,13 +14,13 @@ const DashboardOverview = () => {
     const fetchStats = async () => {
       try {
         const blogUrl = loggedInUser.role === 'admin' 
-          ? "http://localhost:5000/api/blogs" 
-          : `http://localhost:5000/api/blogs?author_id=${loggedInUser.id}`;
+          ? `${API_URL}/api/blogs` 
+          : `${API_URL}/api/blogs?author_id=${loggedInUser.id}`;
 
         const [enquiriesRes, blogsRes, programsRes] = await Promise.all([
-          axios.get("http://localhost:5000/api/enquiries"),
+          axios.get(`${API_URL}/api/enquiries`),
           axios.get(blogUrl),
-          axios.get("http://localhost:5000/api/programs")
+          axios.get(`${API_URL}/api/programs`)
         ]);
         
         setStats({ 

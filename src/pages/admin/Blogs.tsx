@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "@/config";
 import { 
   Plus, Edit, Trash2, Search, Eye, 
   Settings, Globe, BarChart, Image as ImageIcon,
@@ -31,7 +32,7 @@ const BlogManager = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/blogs");
+      const response = await axios.get(`${API_URL}/api/blogs`);
       setBlogs(response.data);
     } catch (error) { console.error("Error fetching blogs", error); }
   };
@@ -51,7 +52,7 @@ const BlogManager = () => {
     if (!currentBlog.title || !currentBlog.slug) return toast.error("Title and Slug are required");
     try {
       const user = JSON.parse(localStorage.getItem("adminUser") || "{}");
-      await axios.post("http://localhost:5000/api/blogs", {
+      await axios.post(`${API_URL}/api/blogs`, {
         ...currentBlog,
         author_id: user.id
       });
@@ -68,7 +69,7 @@ const BlogManager = () => {
     const formData = new FormData();
     formData.append("image", file);
     try {
-      const res = await axios.post("http://localhost:5000/api/upload", formData);
+      const res = await axios.post(`${API_URL}/api/upload`, formData);
       setCurrentBlog({ ...currentBlog, featured_image: res.data.url });
       toast.success("Image uploaded!");
     } catch (error) { toast.error("Upload failed"); }

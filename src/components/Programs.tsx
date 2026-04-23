@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "@/config";
 import { 
   BookOpen, Mic, Users, Trophy, Sparkles, 
   ChevronRight, Clock, Users as UsersIcon, Calendar, Phone,
@@ -23,7 +24,7 @@ const Programs = () => {
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/programs");
+        const response = await axios.get(`${API_URL}/api/programs`);
         setPrograms(response.data);
       } catch (error) { console.error("Error fetching programs", error); }
       finally { setLoading(false); }

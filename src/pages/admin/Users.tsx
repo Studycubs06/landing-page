@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "@/config";
 import { Plus, UserPlus, Shield, User as UserIcon, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,7 +16,7 @@ const UserManager = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/users");
+      const response = await axios.get(`${API_URL}/api/users`);
       setUsers(response.data);
     } catch (error) { console.error("Error fetching users", error); }
   };

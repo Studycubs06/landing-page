@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "@/config";
 import { Plus, Edit, Trash2, BookOpen, MoveUp, MoveDown, Image as ImageIcon, Layout, ListChecks, Clock, Zap, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,7 +20,7 @@ const ProgramManager = () => {
 
   const fetchPrograms = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/programs");
+      const response = await axios.get(`${API_URL}/api/programs`);
       setPrograms(response.data);
     } catch (error) { console.error("Error fetching programs", error); }
   };
@@ -37,9 +38,9 @@ const ProgramManager = () => {
   const handleSave = async () => {
     try {
       if (currentProgram.id) {
-        await axios.put(`http://localhost:5000/api/programs/${currentProgram.id}`, currentProgram);
+        await axios.put(`${API_URL}/api/programs/${currentProgram.id}`, currentProgram);
       } else {
-        await axios.post("http://localhost:5000/api/programs", currentProgram);
+        await axios.post(`${API_URL}/api/programs`, currentProgram);
       }
       toast.success("Program details updated successfully!");
       setIsEditing(false);
@@ -50,7 +51,7 @@ const ProgramManager = () => {
   const handleDelete = async (id: number) => {
     if (!confirm("Delete this program? This cannot be undone.")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/programs/${id}`);
+      await axios.delete(`${API_URL}/api/programs/${id}`);
       toast.success("Program removed");
       fetchPrograms();
     } catch (error) { toast.error("Delete failed"); }

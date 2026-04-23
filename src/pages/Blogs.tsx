@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { API_URL } from "@/config";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -15,7 +16,7 @@ const PublicBlogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/public/blogs");
+        const response = await axios.get(`${API_URL}/api/public/blogs`);
         setBlogs(response.data);
       } catch (error) { console.error("Error fetching blogs", error); }
       finally { setLoading(false); }

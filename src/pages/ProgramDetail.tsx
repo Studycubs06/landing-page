@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import { API_URL } from "@/config";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { 
@@ -19,7 +20,7 @@ const ProgramDetail = () => {
   useEffect(() => {
     const fetchProgram = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/public/programs/${slug}`);
+        const response = await axios.get(`${API_URL}/api/public/programs/${slug}`);
         setProgram(response.data);
         document.title = `${response.data.title} | StudyCubs Programs`;
       } catch (error) { console.error("Error fetching program", error); }

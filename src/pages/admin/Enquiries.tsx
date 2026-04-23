@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "@/config";
 import { format } from "date-fns";
 import { MoreHorizontal, Phone, CheckCircle2, Clock } from "lucide-react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -19,7 +20,7 @@ const EnquiryManager = () => {
 
   const fetchEnquiries = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/enquiries");
+      const response = await axios.get(`${API_URL}/api/enquiries`);
       setEnquiries(response.data);
     } catch (error) { console.error("Error fetching enquiries", error); }
     finally { setLoading(false); }
@@ -30,7 +31,7 @@ const EnquiryManager = () => {
   const handleStatusUpdate = async (id: number, newStatus: string) => {
     try {
       const user = JSON.parse(localStorage.getItem("adminUser") || "{}");
-      await axios.patch(`http://localhost:5000/api/enquiries/${id}`, { 
+      await axios.patch(`${API_URL}/api/enquiries/${id}`, { 
         status: newStatus,
         updated_by: user.id 
       });
