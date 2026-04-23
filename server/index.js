@@ -7,14 +7,15 @@ const jwt = require('jsonwebtoken');
 const cloudinary = require('cloudinary').v2;
 const multer = require('multer');
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
+const path = require('path');
 
-dotenv.config();
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 // Cloudinary Configuration
 cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_NAME || 'dikonxiyq', 
-    api_key: '437446832751749',
-    api_secret: 'OeqDDPZtwibq33-rIFc0mKrbvgI'
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME || 'dikonxiyq', 
+    api_key: process.env.CLOUDINARY_API_KEY || '437446832751749',
+    api_secret: process.env.CLOUDINARY_API_SECRET || 'OeqDDPZtwibq33-rIFc0mKrbvgI'
 });
 
 const storage = new CloudinaryStorage({
@@ -33,52 +34,51 @@ app.use(express.json());
 
 // Database Connection Setup
 const pool = mysql.createPool({
-    host: process.env.DB_HOST || 'localhost',
+    host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
+    database: process.env.DB_NAME, // LOCK the database here
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
 });
 
-// Graceful Database initialization
-pool.getConnection((err, connection) => {
+// Create database if not exists and then use it
+pool.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME}`, (err) => {
     if (err) {
-        console.error('CRITICAL: Database connection failed:', err);
+        console.error('Error creating database:', err);
         return;
     }
-    console.log('Database connected successfully.');
+    console.log(`Database "${process.env.DB_NAME}" checked/created.`);
     
-    // Migration checks (Add columns if missing)
-    connection.query("ALTER TABLE enquiries ADD COLUMN IF NOT EXISTS updated_by INT", (err) => {
-        if (err) console.log("Migration check: enquiries.updated_by done.");
+    // Now switch to using the database
+    pool.query(`USE ${process.env.DB_NAME}`, (err) => {
+        if (err) console.error('Error switching to database:', err);
+        else {
+            console.log(`Using database: ${process.env.DB_NAME}`);
+            // Ensure updated_by column exists
+            pool.query("ALTER TABLE enquiries ADD COLUMN IF NOT EXISTS updated_by INT", (err) => {
+                if (err) console.log("Migration check done.");
+            });
+
+            // Ensure all program columns exist
+            const programCols = [
+                "full_description TEXT", 
+                "overview_points TEXT", 
+                "duration VARCHAR(255)", 
+                "level VARCHAR(255)", 
+                "timing VARCHAR(255)", 
+                "price VARCHAR(255)", 
+                "slug VARCHAR(255) UNIQUE", 
+                "batch_size VARCHAR(255)"
+            ];
+            programCols.forEach(col => {
+                pool.query(`ALTER TABLE programs ADD COLUMN IF NOT EXISTS ${col}`, (err) => {
+                    if (err) console.log(`Check for ${col} done.`);
+                });
+            });
+        }
     });
-
-    const programCols = [
-        "full_description TEXT", 
-        "overview_points TEXT", 
-        "duration VARCHAR(255)", 
-        "level VARCHAR(255)", 
-        "timing VARCHAR(255)", 
-        "price VARCHAR(255)", 
-        "slug VARCHAR(255) UNIQUE", 
-        "batch_size VARCHAR(255)"
-    ];
-    programCols.forEach(col => {
-        connection.query(`ALTER TABLE programs ADD COLUMN IF NOT EXISTS ${col}`, (err) => {
-            if (err) console.log(`Migration check: programs.${col} done.`);
-        });
-    });
-    
-    connection.release();
-});
-
-const db = pool;
-
-// --- HEALTH CHECK ---
-app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok', message: 'Server is running', time: new Date() });
 });
 
 const db = pool;
@@ -110,6 +110,7 @@ app.post('/api/auth/login', (req, res) => {
             const isMatch = await bcrypt.compare(password, user.password);
             console.log('Bcrypt Match Result:', isMatch);
 
+            /* 
             // FALLBACK: If bcrypt fails but password is 'admin123' and username is 'admin'
             // This is ONLY for troubleshooting right now.
             let finalMatch = isMatch;
@@ -117,8 +118,9 @@ app.post('/api/auth/login', (req, res) => {
                 console.log('WARNING: Bcrypt failed but fallback matched admin123. Letting user in...');
                 finalMatch = true;
             }
+            */
             
-            if (!finalMatch) {
+            if (!isMatch) {
                 console.log('Login FAILED: Incorrect password.');
                 return res.status(401).json({ message: 'Invalid credentials' });
             }
@@ -306,11 +308,10 @@ app.post('/api/upload', upload.single('image'), (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-// Export for Passenger/Hostinger
-module.exports = app;
-
 if (require.main === module) {
     app.listen(PORT, () => {
         console.log(`Server running on port ${PORT}`);
     });
 }
+
+module.exports = app;
